@@ -3,6 +3,8 @@ source 'https://rubygems.org'
 gem 'rails', '3.2.3'
 gem 'pg'
 gem 'heroku'
+gem 'delayed_job_active_record'
+gem 'hirefire' # Must be installed after delayed_job_active_record
 gem 'asset_sync', '>= 0.2.3'
 
 # Bundle edge Rails instead:
