@@ -47,8 +47,4 @@ Hornsbybathroom::Application.configure do
   AppConfig = {
     :from_email => 'Hornsby Bathroom <testhornsbybathroom@gmail.com>'
   }
-
-  AppConfig = {
-    :from_email => 'Hornsby Bathroom <hornsbybathroom@gmail.com>'
-  }
 end

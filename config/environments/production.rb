@@ -20,6 +20,10 @@ Hornsbybathroom::Application.configure do
   # Generate digests for assets URLs
   config.assets.digest = true
 
+  config.action_controller.asset_host = Proc.new do |source, request|
+    request.ssl? ? "https://#{ENV['FOG_DIRECTORY']}.s3.amazonaws.com" : "http://{ENV['FOG_DIRECTORY']}.s3.amazonaws.com"
+  end
+
   # Defaults to Rails.root.join("public/assets")
   # config.assets.manifest = YOUR_PATH
 
@@ -72,10 +76,6 @@ Hornsbybathroom::Application.configure do
     :user_name  => "hornsbybathroom@gmail.com",
     :password  => "bathroomhornsby2011",
     :authentication  => :plain
-  }
-
-  AppConfig = {
-    :from_email => 'Hornsby Bathroom <hornsbybathroom@gmail.com>'
   }
 
   AppConfig = {
