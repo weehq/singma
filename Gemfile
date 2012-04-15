@@ -1,11 +1,20 @@
 source 'https://rubygems.org'
 
 gem 'rails', '3.2.3'
+
+gem 'truncate_html'
 gem 'pg'
+gem 'page_title_helper'
+gem 'kaminari'
 gem 'heroku'
+gem 'dynamic_form'
+gem 'devise'
 gem 'delayed_job_active_record'
 gem 'hirefire' # Must be installed after delayed_job_active_record
-gem 'asset_sync', '>= 0.2.3'
+gem 'daemons'
+gem 'custom_error_message'
+gem 'cancan'
+gem 'asset_sync','> 0.2.4'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
