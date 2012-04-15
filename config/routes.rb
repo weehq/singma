@@ -1,7 +1,15 @@
 Hornsbybathroom::Application.routes.draw do
-  get "home/index"
+  resources :terms_of_use, :path => 'terms-of-use'
 
-  resources :contact_us, :path => "contact-us"
+  resources :privacy_policy, :path => 'privacy-policy'
+
+  resources :contacts, :path => "contact-us"
+
+  resources :abouts, :path => 'about-us'
+
+  resources :site_map, :path => 'site-map'
+
+  get "home/index"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
