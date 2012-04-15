@@ -11,3 +11,160 @@
  *= require_self
  *= require_tree .
 */
+
+/* common */
+body {
+  background: #fbfbfb;
+  background: -webkit-linear-gradient(bottom, #fff, #fbfbfb);
+  background: -moz-linear-gradient(bottom, #fff, #fbfbfb);
+  background: -ms-linear-gradient(bottom, #fff, #fbfbfb);
+  background: -o-linear-gradient(bottom, #fff, #fbfbfb);
+  color: #666;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: #0e81ce;
+  text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  padding: 0;
+  vertical-align: top;
+}
+
+h1 {
+  font-size: 32px;
+  line-height: 32px;
+  margin: 0;
+  padding: 0;
+}
+
+h2 {
+  font-size: 16px;
+  line-height: 16px;
+  margin: 0 0 20px;
+}
+
+h3 {
+  font-size: 14px;
+  line-height: 14px;
+  margin: 0 0 10px;
+}
+
+h4 {
+  font-size: 12px;
+  line-height: 12px;
+  margin: 0 0 10px;
+}
+
+p {
+  margin: 0 0 10px;
+}
+
+#header,
+.main,
+footer {
+  text-align: center;
+}
+
+.content {
+  margin: 0 auto;
+  text-align: left;
+  width: 960px;
+}
+
+.addthis_toolbox {
+  margin: 15px 0;
+}
+
+/* messages */
+.alert {
+  color: red;
+}
+.notice {
+  color: green;
+}
+#error_explanation {
+  color: red;
+}
+
+/* body */
+.main .content {
+  padding-bottom: 20px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+/* pagination */
+.pagination {
+  width: 100%;
+}
+.pagination .first,
+.pagination .prev,
+.pagination .next,
+.pagination .last,
+.pagination .page {
+  background: #666;
+  border: 1px solid #333;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  cursor: pointer;
+  display: block;
+  float: left;
+  font-size: 14px;
+  height: 24px;
+  line-height: 24px;
+  margin: 0 3px 0 0;
+  text-align: center;
+  width: auto;
+}
+.pagination .page {
+  width: 50px;
+}
+.pagination .first,
+.pagination .prev,
+.pagination .next,
+.pagination .last {
+  width: 80px;
+}
+.pagination .first a,
+.pagination .prev a,
+.pagination .next a,
+.pagination .last a,
+.pagination .page a {
+  color: #fbfbfb;
+  display: block;
+  width: auto;
+}
+.pagination .page.current {
+  background: #333;
+  border: 1px solid #333;
+  color: #fbfbfb;
+}
+
+/* equivalent to clear:both */
+.clearfix:after {
+  content: ".";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  line-height: 0;
+  height: 0;
+}
+.clearfix {
+  display: inline-block;
+}
+html[xmlns] .clearfix {
+  display: block;
+}
+* html .clearfix {
+  height: 1%;
+}

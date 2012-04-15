@@ -1,0 +1,96 @@
+// colors
+$whiteish: #FBFBFB;
+$light_grey: #666;
+$lighter_grey: #CCC;
+$dark_grey: #333;
+
+// linear gradient
+$gradient_top_bottom: top, $dark_grey, $light_grey;
+
+// box shadow
+$shadow_top_center: 0 -3px 5px $dark_grey;
+
+// width
+$column_width: 306px;
+
+//--------//
+
+// footer
+footer {
+  background: $light_grey;
+  background: -webkit-linear-gradient(top, #333, #666);
+  background: -moz-linear-gradient(top, #333, #666);
+  background: -ms-linear-gradient(top, #333, #666);
+  background: -o-linear-gradient(top, #333, #666);
+  box-shadow: $shadow_top_center;
+  -webkit-box-shadow: $shadow_top_center;
+  -moz-box-shadow: $shadow_top_center;
+  color: $whiteish;
+  h2 {
+    border-bottom: 1px dotted $lighter_grey;
+    padding: 0 0 20px;
+  }
+  a {
+    color: $whiteish;
+  }
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  ul li {
+    float: left;
+    line-height: 24px;
+    margin-left: 5px;
+    margin-right: 5px;
+    width: 143px;
+  }
+  .content {
+    padding: 30px 10px 40px;
+    .column_1,
+    .column_2,
+    .column_3 {
+      float: left;
+      margin-bottom: 20px;
+    }
+    .column_1,
+    .column_2 {
+      margin-right: 20px;
+    }
+    .column_1,
+    .column_3 {
+      width: $column_width;
+    }
+    .column_2 {
+      width: $column_width + 2px;
+    }
+    .column_3 ul {
+      border-top: 1px dotted $light_grey;
+    }
+    .column_3 ul li {
+      margin: 0;
+      width: auto;
+    }
+    .column_3 .text {
+      line-height: 24px;
+    }
+    .importance {
+      border-top: 1px solid #ccc;
+      border-bottom: 1px solid #ccc;
+      width: 100%;
+    }
+    .importance,
+    .importance a {
+      color: #ccc;
+    }
+    .importance li,
+    .importance nav li {
+      margin: 0;
+      width: auto;
+    }
+    .importance nav {
+      margin: 0 auto;
+      width: 240px;
+    }
+  }
+}
