@@ -1,4 +1,8 @@
 Hornsbybathroom::Application.routes.draw do
+  devise_for :users, :path => '/', :path_names => {:sign_in => 'login', :sign_out => 'logout'}
+
+  resources :users
+
   resources :terms_of_use, :path => 'terms-of-use'
 
   resources :privacy_policy, :path => 'privacy-policy'
@@ -8,8 +12,6 @@ Hornsbybathroom::Application.routes.draw do
   resources :abouts, :path => 'about-us'
 
   resources :site_map, :path => 'site-map'
-
-  get "home/index"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

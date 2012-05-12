@@ -35,6 +35,15 @@ Hornsbybathroom::Application.configure do
   # Expands the lines which load the assets
   config.assets.debug = true
 
+# Suggested by Devise gem
+  # Need for link_to
+  config.action_mailer.default_url_options = { :host => "localhost:3000" }
+
+  # Need for image_tag
+  config.action_mailer.asset_host = "http://localhost:3000"
+
+  config.action_mailer.default_url_options = { :host => 'localhost:3000' }
+
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = {
     :address  => "smtp.gmail.com",

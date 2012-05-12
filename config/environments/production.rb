@@ -15,13 +15,14 @@ Hornsbybathroom::Application.configure do
   config.assets.compress = true
 
   # Don't fallback to assets pipeline if a precompiled asset is missed
-  config.assets.compile = false
+  config.assets.compile = true
 
   # Generate digests for assets URLs
   config.assets.digest = true
 
+  # Enable serving of images, stylesheets, and JavaScripts from an asset server
   config.action_controller.asset_host = Proc.new do |source, request|
-    request.ssl? ? "https://#{ENV['FOG_DIRECTORY']}.s3.amazonaws.com" : "http://{ENV['FOG_DIRECTORY']}.s3.amazonaws.com"
+    request.ssl? ? "https://#{ENV['FOG_DIRECTORY']}.s3-website-us-east-1.amazonaws.com" : "http://#{ENV['FOG_DIRECTORY']}.s3-website-us-east-1.amazonaws.com"
   end
 
   # Defaults to Rails.root.join("public/assets")
@@ -69,6 +70,15 @@ Hornsbybathroom::Application.configure do
   # with SQLite, MySQL, and PostgreSQL)
   # config.active_record.auto_explain_threshold_in_seconds = 0.5
 
+  config.action_mailer.default_url_options = { :host => 'hornsbybathroom.heroku.com' }
+
+# Suggested by Devise gem
+  # Need for link_to
+  config.action_mailer.default_url_options = { :host => "http://hornsbybathroom.heroku.com" }
+
+  # Need for image_tag
+  config.action_mailer.asset_host = "http://localhost:3000"
+
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = {
     :address  => "smtp.gmail.com",
@@ -79,6 +89,7 @@ Hornsbybathroom::Application.configure do
   }
 
   AppConfig = {
+    :host => 'localhost:3000',
     :from_email => 'Hornsby Bathroom <hornsbybathroom@gmail.com>'
   }
 end
