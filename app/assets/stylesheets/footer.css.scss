@@ -88,9 +88,11 @@ footer {
       margin: 0;
       width: auto;
     }
+    .importance .copyright {
+      padding-left: 5px;
+    }
     .importance nav {
-      margin: 0 auto;
-      width: 240px;
+      float: right;
     }
   }
 }
