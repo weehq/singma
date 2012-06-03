@@ -2,4 +2,32 @@
 # See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
 
 en:
-  hello: "Hello world"
+  site_map:
+    index:
+      title:
+        - "Site Map"
+        - !ruby/sym other
+  abouts:
+    index:
+      title:
+        - "About Us"
+        - !ruby/sym other
+  contacts:
+    index:
+      title:
+        - "Contact Us"
+        - !ruby/sym other
+  privacy_policy:
+    index:
+      title:
+        - "Privacy Policy"
+        - !ruby/sym other
+  terms_of_use:
+    index:
+      title:
+        - "Terms of Use"
+        - !ruby/sym other
+  activerecord:
+    attributes:
+      user:
+        login: "Username or email"

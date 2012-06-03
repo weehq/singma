@@ -1,2 +1,16 @@
-<h1>SiteMap#index</h1>
-<p>Find me in app/views/site_map/index.html.erb</p>
+<div id='site_map'>
+  <h2><%= h2 %></h2>
+
+  <nav>
+    <ul>
+      <li><%= link_to 'Home', root_path %></li>
+      <li><%= link_to 'Testimonials', '#' %></li>
+      <li><%= link_to 'About Us', abouts_path %></li>
+      <li><%= link_to 'Contact Us', contacts_path %></li>
+      <li><%= link_to 'FAQ', '#' %></li>
+      <li><%= link_to 'Privacy Policy', privacy_policy_index_path %></li>
+      <li><%= link_to 'Disclaimer', '#' %></li>
+      <li><%= link_to 'Terms of Use', terms_of_use_index_path %></li>
+    </ul>
+  </nav>
+</div>

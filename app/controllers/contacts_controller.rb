@@ -2,11 +2,11 @@ class ContactsController < ApplicationController
   # GET /contacts
   # GET /contacts.json
   def index
-    @contacts = Contact.all
+    @contact = Contact.new
 
     respond_to do |format|
       format.html # index.html.erb
-      format.json { render json: @contacts }
+      format.json { render json: @contact }
     end
   end
 
@@ -42,14 +42,16 @@ class ContactsController < ApplicationController
   def create
     @contact = Contact.new(params[:contact])
 
+    @contact.name = params[:contact][:name].titleize
+
     respond_to do |format|
       if @contact.save
-        ContactMailer.confirm_email(params[:contact]).deliver
+        ContactMailer.query_email(@contact).deliver
 
-        format.html { redirect_to new_contact_url, notice: 'Thank you for contacting us. We will respond to your message as soon as possible.' }
-        format.json { render json: @contact, status: :created, location: new_contact_url }
+        format.html { redirect_to contacts_url, notice: 'Your message was successfully send.' }
+        format.json { render json: @contact, status: :created, location: @contact }
       else
-        format.html { render action: "new" }
+        format.html { render action: "index" }
         format.json { render json: @contact.errors, status: :unprocessable_entity }
       end
     end
@@ -63,7 +65,7 @@ class ContactsController < ApplicationController
     respond_to do |format|
       if @contact.update_attributes(params[:contact])
         format.html { redirect_to @contact, notice: 'Contact was successfully updated.' }
-        format.json { head :no_content }
+        format.json { head :ok }
       else
         format.html { render action: "edit" }
         format.json { render json: @contact.errors, status: :unprocessable_entity }
@@ -79,7 +81,7 @@ class ContactsController < ApplicationController
 
     respond_to do |format|
       format.html { redirect_to contacts_url }
-      format.json { head :no_content }
+      format.json { head :ok }
     end
   end
 end

@@ -1,45 +1,55 @@
 // colors
 $whiteish: #FBFBFB;
+$light_orange: #ffb47d;
+$dark_orange: #e4995f;
+$dark_blue: #afb9d4;
+$dark_green: #5d9651;
 $light_grey: #666;
 $lighter_grey: #CCC;
-$dark_grey: #333;
 
 // border
 $border_top_bottom: 1px dotted $lighter_grey;
 
 // linear gradient
-$gradient_top_bottom: top, $dark_grey, $light_grey;
-$gradient_left_right: left, $dark_grey, $light_grey;
-$gradient_right_left: right, $dark_grey, $light_grey;
+$gradient_top_bottom: top, $dark_orange, $light_orange;
 
 // box shadow
-$shadow_top_center: 0 -3px 5px $dark_grey;
-$shadow_bottom_center: 0 3px 5px $dark_grey;
-
-// width
-$column_width: 306px;
+$shadow_bottom_center: 0 3px 5px $dark_orange;
 
 //--------//
 
 #header {
+  margin-bottom: 40px;
   .content {
-    padding: 30px 10px 30px;
+    padding: 30px 10px 0;
+    img {
+      float: left;
+      height: 109px;
+      margin-right: 15px;
+      // width: 93px;
+      width: 109px;
+    }
     h1 {
       display: inline-block;
       float: left;
+      line-height: 109px;
+      .orange {
+        color: $dark_orange;
+      }
+      .blue {
+        color: $dark_blue;
+      }
+      .green {
+        color: $dark_green;
+      }
       a {
         color: $light_grey;
         text-shadow: $light_grey 1px 1px 3px;
       }
     }
-    img {
-      float: right;
-      height: 60px;
-      width: 500px;
-    }
   }
   .main_menu {
-    background: $light_grey;
+    background: $light_orange;
     background: -webkit-linear-gradient($gradient_top_bottom);
     background: -moz-linear-gradient($gradient_top_bottom);
     background: -ms-linear-gradient($gradient_top_bottom);
@@ -47,24 +57,10 @@ $column_width: 306px;
     box-shadow: $shadow_bottom_center;
     -webkit-box-shadow: $shadow_bottom_center;
     -moz-box-shadow: $shadow_bottom_center;
+    color: $whiteish;
     a {
-      color: $lighter_grey;
+      color: $whiteish;
     }
-    .content {
-      padding: 10px;
-    }
-    ul {
-      list-style-type: none;
-      margin: 0;
-      padding: 0;
-    }
-    li {
-      float: left;
-    }
-  }
-  .sub_menu {
-    border-top: $border_top_bottom;
-    border-bottom: $border_top_bottom;
     .content {
       padding: 10px;
     }
@@ -82,10 +78,6 @@ $column_width: 306px;
     .left_menu li,
     .right_menu li {
       float: left;
-    }
-    .left_menu a,
-    .right_menu a {
-      color: $light_grey;
     }
     .username {
       font-weight: bold;

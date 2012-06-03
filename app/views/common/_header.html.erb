@@ -3,10 +3,9 @@
 
   <div class='content clearfix'>
 
-    <h1><%= link_to 'Hornsby Bathroom', root_path %></h1>
+    <%= link_to image_tag('logo-singma_bathroom_renovations.png', :alt => 'Hornsby Bathroom'), root_path, :title => 'Hornsby Bathroom' %>
 
-    <%= link_to(image_tag('rails.png', :alt => 'Hornsby Bathroom', :style => 'display: none;'), :title => 'Hornsby Bathroom') %>
+    <h1><%= link_to truncate_html("<span class='orange'>Singma</span> <span class='blue'>Bathroom</span> <span class='green'>Renovations</span>"), root_path %></h1>
+
   </div>
-
-  <%= render 'common/sub_menu' %>
 </div>

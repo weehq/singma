@@ -1,0 +1,25 @@
+<div id='login'>
+  <h2>Login</h2>
+  <%= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
+    <div class="field clearfix">
+      <%= f.label :login %>
+      <%= f.text_field :login %>
+    </div>
+    <div class="field clearfix">
+      <%= f.label :password %>
+      <%= f.password_field :password %>
+    </div>
+
+    <% if devise_mapping.rememberable? -%>
+      <div class="checkbox clearfix">
+        <label for='remember_me'>&nbsp;</label>
+        <%= f.check_box :remember_me %> <span class='first_line'>Remember me on this computer</span>
+      </div>
+    <% end -%>
+
+    <div class="actions clearfix">
+      <%= f.submit('LOGIN', :title => 'Login', :class => 'submit_button') %>
+    </div>
+  <% end %>
+  <!--%= render :partial => "users/shared/links" %-->
+</div>
