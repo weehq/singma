@@ -12,6 +12,11 @@ en:
       title:
         - "About Us"
         - !ruby/sym other
+  quotes:
+    new:
+      title:
+        - "Get Quotes"
+        - !ruby/sym other
   contacts:
     index:
       title:
