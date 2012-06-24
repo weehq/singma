@@ -82,7 +82,7 @@ Hornsbybathroom::Application.configure do
     :address  => "smtp.gmail.com",
     :port  => 587,
     :user_name  => "hornsbybathroom@gmail.com",
-    :password  => "bathroomhornsby2012",
+    :password  => "bathroomhornsby2013",
     :authentication  => :plain
   }
 
