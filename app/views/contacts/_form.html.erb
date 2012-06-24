@@ -1,21 +1,47 @@
-<%= form_for(@contact) do |f| %>
+<%= form_for @contact do |f| %>
   <div id="error_explanation">
     <%= f.error_messages :message => '' %>
   </div>
+
   <div class="field clearfix">
     <%= f.label :name %>
     <%= f.text_field :name %>
   </div>
+  <div class="field clearfix" style='display: none;'>
+    <%= f.label :address %>
+    <%= f.text_field :address %>
+  </div>
+  <div class="field clearfix">
+    <%= f.label :postcode %>
+    <%= f.text_field :postcode %>
+  </div>
+  <div class="field clearfix">
+    <%= f.label :phone %>
+    <%= f.text_field :phone %>
+  </div>
   <div class="field clearfix">
     <%= f.label :email %>
-    <%= f.text_field :email %>
+    <%= f.email_field :email %>
   </div>
   <div class="field clearfix">
-    <%= f.label :message %>
-    <%= f.text_area :message %>
+    <%= f.label :prefer_contact %>
+    <%= f.select :prefer_contact, "<option>Phone</option><option>Email</option>".html_safe, :prompt => "Select" %>
   </div>
+  <div class="field clearfix">
+    <%= f.label :bathroom_requirements %>
+    <%= f.text_area :bathroom_requirements %>
+  </div>
+  <div class="field clearfix">
+    <%= f.label :budget, "Budget <span style='float: right;'>$</span>".html_safe, :class => 'clearfix' %>
+    <%= f.text_field :budget %>
+  </div>
+  <div class="field clearfix">
+    <%= f.label :other_comments %>
+    <%= f.text_area :other_comments %>
+  </div>
+
   <div class="actions clearfix">
     <label for='commit'>&nbsp;</label>
-    <%= f.submit('Submit', :title => 'Submit', :class => 'submit_button') %>
+    <%= f.submit('Submit', :title => 'Submit', :class => 'submit_button process') %>
   </div>
-<% end %>
+<% end -%>

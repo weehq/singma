@@ -7,5 +7,5 @@ class Quote < ActiveRecord::Base
   validates :access_difficulty, :presence => true
   validates_date :job_completion, :after => :today
 
-  attr_accessible :access_difficulty, :full_renovation, :ground_floor, :job_completion, :name, :email, :other_renovation, :phone, :postcode
+  attr_accessible :access_difficulty, :full_renovation, :ground_floor, :job_completion, :name, :email, :other_comments, :phone, :postcode
 end

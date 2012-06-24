@@ -12,14 +12,14 @@ class QuotesController < ApplicationController
 
   # GET /quotes/1
   # GET /quotes/1.json
-  def show
-    @quote = Quote.find(params[:id])
+  # def show
+  #   @quote = Quote.find(params[:id])
 
-    respond_to do |format|
-      format.html # show.html.erb
-      format.json { render json: @quote }
-    end
-  end
+  #   respond_to do |format|
+  #     format.html # show.html.erb
+  #     format.json { render json: @quote }
+  #   end
+  # end
 
   # GET /quotes/new
   # GET /quotes/new.json
@@ -33,14 +33,16 @@ class QuotesController < ApplicationController
   end
 
   # GET /quotes/1/edit
-  def edit
-    @quote = Quote.find(params[:id])
-  end
+  # def edit
+  #   @quote = Quote.find(params[:id])
+  # end
 
   # POST /quotes
   # POST /quotes.json
   def create
     @quote = Quote.new(params[:quote])
+
+    @quote.name = params[:quote][:name].titleize
 
     # Calculate final quote
     @quote.final_quote = set_quote = @quote.set_quote
@@ -64,29 +66,29 @@ class QuotesController < ApplicationController
 
   # PUT /quotes/1
   # PUT /quotes/1.json
-  def update
-    @quote = Quote.find(params[:id])
+  # def update
+  #   @quote = Quote.find(params[:id])
 
-    respond_to do |format|
-      if @quote.update_attributes(params[:quote])
-        format.html { redirect_to @quote, notice: 'Quote was successfully updated.' }
-        format.json { head :no_content }
-      else
-        format.html { render action: "edit" }
-        format.json { render json: @quote.errors, status: :unprocessable_entity }
-      end
-    end
-  end
+  #   respond_to do |format|
+  #     if @quote.update_attributes(params[:quote])
+  #       format.html { redirect_to @quote, notice: 'Quote was successfully updated.' }
+  #       format.json { head :no_content }
+  #     else
+  #       format.html { render action: "edit" }
+  #       format.json { render json: @quote.errors, status: :unprocessable_entity }
+  #     end
+  #   end
+  # end
 
   # DELETE /quotes/1
   # DELETE /quotes/1.json
-  def destroy
-    @quote = Quote.find(params[:id])
-    @quote.destroy
+  # def destroy
+  #   @quote = Quote.find(params[:id])
+  #   @quote.destroy
 
-    respond_to do |format|
-      format.html { redirect_to quotes_url }
-      format.json { head :no_content }
-    end
-  end
+  #   respond_to do |format|
+  #     format.html { redirect_to quotes_url }
+  #     format.json { head :no_content }
+  #   end
+  # end
 end

@@ -14,11 +14,19 @@
 ActiveRecord::Schema.define(:version => 20120624102811) do
 
   create_table "contacts", :force => true do |t|
-    t.string   "name"
-    t.string   "email"
-    t.text     "message"
+    t.string   "name",                  :null => false
+    t.string   "address"
+    t.integer  "postcode",              :null => false
+    t.string   "phone",                 :null => false
+    t.string   "email",                 :null => false
+    t.string   "prefer_contact",        :null => false
+    t.text     "bathroom_requirements", :null => false
+    t.decimal  "budget"
+    t.text     "other_comments",        :null => false
     t.datetime "created_at"
   end
+
+  add_index "contacts", ["name"], :name => "index_contacts_on_name"
 
   create_table "delayed_jobs", :force => true do |t|
     t.integer  "priority",   :default => 0
@@ -45,7 +53,7 @@ ActiveRecord::Schema.define(:version => 20120624102811) do
     t.string   "access_difficulty",                     :null => false
     t.date     "job_completion",                        :null => false
     t.string   "full_renovation"
-    t.text     "other_renovation"
+    t.text     "other_comments"
     t.decimal  "set_quote",         :default => 8000.0, :null => false
     t.decimal  "final_quote",                           :null => false
     t.datetime "created_at"

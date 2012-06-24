@@ -1,6 +1,6 @@
 @import 'common.css.scss';
 
-#home {
+#home, #quote {
   h2 {
     background: $light_blue;
     background: -webkit-linear-gradient($gradient_left_right);
@@ -28,5 +28,20 @@
   }
   form {
     border-left: 1px dotted $lighter_grey;
+  }
+  table {
+    padding-left: 10px;
+    padding-right: 10px;
+    th, td {
+      padding-left: 5px;
+      padding-right: 5px;
+      width: 10%;
+    }
+    th {
+      border-bottom: 1px solid #ccc;
+    }
+    td {
+      border-bottom: 1px dashed #ccc;
+    }
   }
 }

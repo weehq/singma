@@ -1,10 +1,12 @@
 class ContactMailer < ActionMailer::Base
   default from: AppConfig[:from_email], bcc: "hornsbybathroom@gmail.com"
 
+  include ActionView::Helpers::NumberHelper
+
   def confirm_email(contact)
     @contact = contact
-    @url = "http://hornsbybathroom.heroku.com/"
-    mail(:to => "#{@contact.name} <#{@contact.email}>",
-      :subject => "Contact Hornsby Bathroom")
+    @budget = number_with_precision(contact.budget, :delimiter => ",", :precision => 2)
+
+    mail :to => "#{contact.name} <#{contact.email}>", :subject => "Contact Us [Singma Bathroom Renovations]"
   end
 end

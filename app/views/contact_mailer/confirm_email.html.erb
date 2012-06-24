@@ -4,12 +4,30 @@
     <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
   </head>
   <body>
-    <p>Hi, <%= @contact.name %>!</p>
-    <p>Thank you for contacting us.</p>
-    <p>We will respond to your message as soon as possible.</p>
-    <p>Your message:</p>
-    <p style='font-style: italic; margin-left: 5px;'><%= @contact.message %></p>
-    <p>Kind regards,</p>
-    <p>Hornsby Bathroom</p>
+    <table cellpadding='10' cellspacing='0' width='100%'>
+      <tr>
+        <td width='100%'><%= link_to image_tag("logo-singma_bathroom_renovations.png", :alt => 'Singma Bathroom Renovations', :height => '109', :width => '109'), AppConfig[:host] %></td>
+        <td width='100%'><h1><%= link_to "<span style='color: #e4995f;'>Singma</span> <span style='color: #afb9d4;'>Bathroom</span> <span style='color: #5d9651;'>Renovations</span>".html_safe, AppConfig[:host], :style => 'text-decoration: none;' %></h1></td>
+      </tr>
+      <tr><td width='100%' style='color: #666;'>Dear <%= @contact.name %>,</td></tr>
+      <tr><td width='100%' style='color: #e4995f; font-size: 16px;'>Thank you for contacting us.</td></tr>
+      <tr><td width='100%'>Here's a summary of your submitted details:</td></tr>
+      <tr>
+        <td width='100%'>
+          <ul style='margin: 0; padding:0 0 0 10px;'>
+            <li><span style='font-weight: bold;'>Postcode</span>: <%= @contact.postcode %></li>
+            <li><span style='font-weight: bold;'>Contact number</span>: <%= @contact.phone %></li>
+            <li><span style='font-weight: bold;'>Prefer contact:</span>: <%= @contact.prefer_contact %></li>
+            <li><span style='font-weight: bold;'>Bathroom requirements</span>: <%= @contact.bathroom_requirements %></li>
+            <li><span style='font-weight: bold;'>Budget</span>: $<%= @budget %></li>
+            <li><span style='font-weight: bold;'>Comments</span>: <%= @contact.other_comments %></li>
+          </ul>
+        </td>
+      </tr>
+      <tr><td width='100%'>We will endeavour to contact you as soon as possible.</td></tr>
+      <tr><td width='100%'>If the matter is urgent, please do not hesitate to reply to this email or contact us on 0421 508 024.</td></tr>
+      <tr><td width='100%' style='color: #666'>Kind regards,<br/><br/>the Singma Bathroom Renovations team</td></tr>
+      <tr><td width='100%'><%= link_to AppConfig[:host], AppConfig[:host] %></td></tr>
+    </table>
   </body>
 </html>

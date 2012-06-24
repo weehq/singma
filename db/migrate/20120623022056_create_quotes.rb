@@ -10,7 +10,7 @@ class CreateQuotes < ActiveRecord::Migration
       t.string :access_difficulty, :null => false
       t.date :job_completion, :null => false
       t.string :full_renovation
-      t.text :other_renovation
+      t.text :other_comments
       t.decimal :set_quote, :null => false, :default => 8000.00
       t.decimal :final_quote, :null => false
 

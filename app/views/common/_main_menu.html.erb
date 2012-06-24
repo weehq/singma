@@ -2,18 +2,21 @@
   <div class='content clearfix'>
     <nav>
       <ul class='left_menu clearfix'>
-        <li><%= link_to 'Home', root_path %>&nbsp;&nbsp;|&nbsp;&nbsp;</li>
+        <li><%= link_to 'Home', root_path %><span class='link_separator'></span></li>
+        <li><%= link_to 'Get a Quote', root_path %><span class='link_separator'></span></li>
+        <li><%= link_to 'Job Gallery', root_path %><span class='link_separator'></span></li>
         <li><%= link_to 'Site Map', site_map_index_path %></li>
       </ul>
     </nav>
 
     <nav>
       <ul class='right_menu clearfix'>
-        <!--% if !user_signed_in? && !login_signup_path? -%-->
+        <% if !user_signed_in? && !login_signup_path? -%>
           <li><%= link_to 'Login', new_user_session_path %></li>
-        <!--% end -%-->
+        <% end -%>
         <% if user_signed_in? -%>
-          <li>Welcome, <span class='username'><!--%= current_user.username %--></span>&nbsp;|&nbsp;</li>
+          <li><%= link_to 'View Quotes', quotes_path %><span class='link_separator'></span></li>
+          <li>Welcome, <span class='username'><%= current_user.username %></span><span class='link_separator'></span></li>
           <li><%= link_to 'Logout', 'destroy_user_session_path', :method => :delete %></li>
         <% end -%>
       </ul>

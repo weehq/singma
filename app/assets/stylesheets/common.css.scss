@@ -40,8 +40,30 @@ form {
       border: 1px solid $lighter_grey;
       float: left;
       margin-bottom: 10px;
-      padding: 2px 5px;
+      padding: 3px 5px;
       width: auto;
+    }
+  }
+  .checkbox {
+    height: 12px;
+    line-height: 12px;
+    margin: 10px 0;
+    width: 100%;
+    &.two_lines {
+      margin: 10px 0 15px;
+    }
+    input {
+      float: left;
+      margin-top: 1px;
+      width: auto;
+    }
+    .first_line {
+      display: block;
+      margin: 1px 0 0 130px;
+      width: auto;
+      &.second_line {
+        line-height: 14px;
+      }
     }
   }
   .submit_button {

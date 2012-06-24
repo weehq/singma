@@ -9,7 +9,7 @@ class QuoteMailer < ActionMailer::Base
     @full_renovation = yes_no(@quote.full_renovation)
     @final_quote = number_with_precision(quote.final_quote, :delimiter => ",", :precision => 2)
 
-    mail :to => "#{quote.name} <#{quote.email}>", :subject => "Requesting a Quote [Singma Bathroom Renovations]"
+    mail :to => "#{quote.name} <#{quote.email}>", :subject => "Your Quote [Singma Bathroom Renovations]"
   end
 
 private

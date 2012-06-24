@@ -22,6 +22,10 @@ en:
       title:
         - "Contact Us"
         - !ruby/sym other
+    create:
+      title:
+        - "Contact Us"
+        - !ruby/sym other
   privacy_policy:
     index:
       title:
@@ -32,7 +36,22 @@ en:
       title:
         - "Terms of Use"
         - !ruby/sym other
+  devise:
+    sessions:
+      new:
+        title:
+          - "Login"
+          - !ruby/sym other
   activerecord:
     attributes:
       user:
         login: "Username or email"
+      quote:
+        other_comments: "Comments"
+      contact:
+        other_comments: "Comments"
+    errors:
+      template:
+        header:
+          one: "Oops! Please correct the error below:"
+          other: "Oops! Please correct %{count} errors below:"
