@@ -15,7 +15,7 @@ en:
   quotes:
     new:
       title:
-        - "Get Quotes"
+        - "Get a Quote"
         - !ruby/sym other
   contacts:
     index:
