@@ -70,14 +70,12 @@ Hornsbybathroom::Application.configure do
   # with SQLite, MySQL, and PostgreSQL)
   # config.active_record.auto_explain_threshold_in_seconds = 0.5
 
-  config.action_mailer.default_url_options = { :host => 'hornsbybathroom.heroku.com' }
-
 # Suggested by Devise gem
   # Need for link_to
-  config.action_mailer.default_url_options = { :host => "http://hornsbybathroom.heroku.com" }
+  config.action_mailer.default_url_options = { :host => "hornsbybathroom.heroku.com" }
 
   # Need for image_tag
-  config.action_mailer.asset_host = "http://localhost:3000"
+  config.action_mailer.asset_host = "http://lovebargains.heroku.com"
 
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = {
@@ -89,7 +87,7 @@ Hornsbybathroom::Application.configure do
   }
 
   AppConfig = {
-    :host => 'localhost:3000',
-    :from_email => 'Hornsby Bathroom <hornsbybathroom@gmail.com>'
+    :host => 'http://lovebargains.heroku.com',
+    :from_email => 'Singma Bathroom Renovations <hornsbybathroom@gmail.com>'
   }
 end
