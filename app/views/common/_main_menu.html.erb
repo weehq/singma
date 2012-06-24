@@ -11,13 +11,13 @@
 
     <nav>
       <ul class='right_menu clearfix'>
-        <% if !user_signed_in? && !login_signup_path? -%>
+        <% if !user_signed_in? -%>
           <li><%= link_to 'Login', new_user_session_path %></li>
         <% end -%>
         <% if user_signed_in? -%>
           <li><%= link_to 'View Quotes', quotes_path %><span class='link_separator'></span></li>
           <li>Welcome, <span class='username'><%= current_user.username %></span><span class='link_separator'></span></li>
-          <li><%= link_to 'Logout', 'destroy_user_session_path', :method => :delete %></li>
+          <li><%= link_to 'Logout', destroy_user_session_path, :method => :delete %></li>
         <% end -%>
       </ul>
     </nav>
