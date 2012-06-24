@@ -21,14 +21,16 @@ ActiveRecord::Schema.define(:version => 20120623022056) do
   end
 
   create_table "quotes", :force => true do |t|
-    t.string   "name"
-    t.string   "phone"
-    t.integer  "postcode"
+    t.string   "name",                                  :null => false
+    t.string   "phone",                                 :null => false
+    t.integer  "postcode",                              :null => false
     t.string   "ground_floor"
-    t.string   "access_difficulty"
-    t.date     "job_completion"
+    t.string   "access_difficulty",                     :null => false
+    t.date     "job_completion",                        :null => false
     t.string   "full_renovation"
     t.text     "other_renovation"
+    t.decimal  "set_quote",         :default => 8000.0, :null => false
+    t.decimal  "final_quote",       :default => 8000.0, :null => false
     t.datetime "created_at"
   end
 

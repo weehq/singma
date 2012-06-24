@@ -30,6 +30,9 @@ a {
   color: #0e81ce;
   text-decoration: none;
 }
+a:hover {
+  text-decoration: underline;
+}
 
 h1,
 h2,
@@ -90,6 +93,7 @@ footer {
 }
 .notice {
   color: green;
+  font-weight: bold;
 }
 #error_explanation {
   color: red;
@@ -100,54 +104,6 @@ footer {
   padding-bottom: 40px;
   padding-left: 10px;
   padding-right: 10px;
-}
-
-/* pagination */
-.pagination {
-  width: 100%;
-}
-.pagination .first,
-.pagination .prev,
-.pagination .next,
-.pagination .last,
-.pagination .page {
-  background: #666;
-  border: 1px solid #333;
-  border-radius: 5px;
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  cursor: pointer;
-  display: block;
-  float: left;
-  font-size: 14px;
-  height: 24px;
-  line-height: 24px;
-  margin: 0 3px 0 0;
-  text-align: center;
-  width: auto;
-}
-.pagination .page {
-  width: 50px;
-}
-.pagination .first,
-.pagination .prev,
-.pagination .next,
-.pagination .last {
-  width: 80px;
-}
-.pagination .first a,
-.pagination .prev a,
-.pagination .next a,
-.pagination .last a,
-.pagination .page a {
-  color: #fbfbfb;
-  display: block;
-  width: auto;
-}
-.pagination .page.current {
-  background: #333;
-  border: 1px solid #333;
-  color: #fbfbfb;
 }
 
 /* equivalent to clear:both */

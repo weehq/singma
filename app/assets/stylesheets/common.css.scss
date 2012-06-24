@@ -2,6 +2,8 @@
 $whiteish: #FBFBFB;
 $light_orange: #ffb47d;
 $dark_orange: #e4995f;
+$light_blue: #ced8f3;
+$dark_blue: #afb9d4;
 $dark_blue: #afb9d4;
 $dark_green: #5d9651;
 $light_grey: #666;
@@ -12,6 +14,52 @@ $border_top_bottom: 1px dotted $lighter_grey;
 
 // linear gradient
 $gradient_top_bottom: top, $dark_orange, $light_orange;
+$gradient_left_right: left, $dark_blue, $light_blue;
+$gradient_right_left: right, $dark_blue, $light_blue;
 
 // box shadow
 $shadow_bottom_center: 0 3px 5px $dark_orange;
+$shadow_bottom_right: 3px 3px 5px $light_blue;
+
+// form
+form {
+  padding-left: 10px;
+  padding-right: 10px;
+  label {
+    display: block;
+    float: left;
+    line-height: 23px;
+    margin: 0 5px 0 0;
+    width: 105px;
+  }
+  .field {
+    width: 100%;
+    label {
+      font-weight: bold;
+    }
+    input, select, textarea {
+      border: 1px solid $lighter_grey;
+      float: left;
+      margin-bottom: 10px;
+      padding: 2px 5px;
+      width: auto;
+    }
+  }
+  .submit_button {
+    background: $dark_blue;
+    border: 1px solid $dark_blue;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    color: $whiteish;
+    cursor: pointer;
+    display: block;
+    float: left;
+    font-size: 14px;
+    height: 24px;
+    line-height: 24px;
+    padding: 0 15px;
+    text-align: center;
+    width: auto;
+  }
+}

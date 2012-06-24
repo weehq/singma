@@ -13,3 +13,9 @@
 //= require jquery
 //= require jquery_ujs
 //= require_tree .
+jQuery(function($) {
+  // form submit action
+  jQuery('.submit_button.process').click(function() {
+    jQuery('.submit_button.process').val('Please wait ...');
+  });
+});

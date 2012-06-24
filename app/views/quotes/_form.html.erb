@@ -1,8 +1,7 @@
 <%= form_for @quote do |f| %>
   <% if @quote.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize @quote.errors.count, "error" %> prohibited this quote from being saved:</h2>
-
+      <h2>Oops! Please correct <%= pluralize(@quote.errors.count, "error") %> below:</h2>
       <ul>
       <% @quote.errors.full_messages.each do |msg| %>
         <li><%= msg %></li>
@@ -11,40 +10,41 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :name %><br />
+  <div class="field clearfix">
+    <%= f.label :name %>
     <%= f.text_field :name %>
   </div>
-  <div class="field">
-    <%= f.label :phone %><br />
+  <div class="field clearfix">
+    <%= f.label :phone %>
     <%= f.text_field :phone %>
   </div>
-  <div class="field">
-    <%= f.label :postcode %><br />
+  <div class="field clearfix">
+    <%= f.label :postcode %>
     <%= f.text_field :postcode %>
   </div>
-  <div class="field">
-    <%= f.label :ground_floor %><br />
-    <%= f.text_field :ground_floor %>
+  <div class="field clearfix">
+    <%= f.label :ground_floor %>
+    <%= f.check_box :ground_floor, {}, 'Y' %>
   </div>
-  <div class="field">
-    <%= f.label :access_difficulty %><br />
-    <%= f.text_field :access_difficulty %>
+  <div class="field clearfix">
+    <%= f.label :access_difficulty %>
+    <%= f.select :access_difficulty, "<option>Easy</option><option>Difficult</option>".html_safe, :prompt => "Select" %>
   </div>
-  <div class="field">
-    <%= f.label :job_completion %><br />
-    <%= f.date_select :job_completion %>
+  <div class="field clearfix">
+    <%= f.label :job_completion %>
+    <%= f.date_select :job_completion, :start_year => Time.now.year, :end_year => Time.now.year+2, :max_years_allowed => Time.now.year+2, :prompt => { :day => 'Select Day', :month => 'Select Month', :year => 'Select Year' } %>
   </div>
-  <div class="field">
-    <%= f.label :full_renovation %><br />
-    <%= f.text_field :full_renovation %>
+  <div class="field clearfix">
+    <%= f.label :full_renovation %>
+    <%= f.check_box :full_renovation, {}, 'Y' %>
   </div>
-  <div class="field">
-    <%= f.label :other_renovation %><br />
+  <div class="field clearfix">
+    <%= f.label :other_renovation %>
     <%= f.text_area :other_renovation %>
   </div>
 
-  <div class="actions">
-    <%= f.submit %>
+  <div class="actions clearfix">
+    <label for='commit'>&nbsp;</label>
+    <%= f.submit 'SUBMIT', :class => 'submit_button process' %>
   </div>
 <% end -%>

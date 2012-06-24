@@ -42,9 +42,15 @@ class QuotesController < ApplicationController
   def create
     @quote = Quote.new(params[:quote])
 
+    # Calculate final quote
+    @quote.final_quote = set_quote = @quote.set_quote
+    @quote.final_quote = set_quote+750 if params[:quote][:ground_floor].eql?('Y')
+    @quote.final_quote = @quote.final_quote+750 if params[:quote][:access_difficulty].eql?('Difficult')
+    @quote.final_quote = @quote.final_quote+1000 if params[:quote][:full_renovation].eql?('Y')
+
     respond_to do |format|
       if @quote.save
-        format.html { redirect_to @quote, notice: 'Quote was successfully created.' }
+        format.html { redirect_to new_quote_url, notice: 'Thank you for submitting your details. You will receive an email shortly with the quote.' }
         format.json { render json: @quote, status: :created, location: @quote }
       else
         format.html { render action: "new" }

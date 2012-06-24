@@ -2,6 +2,7 @@ source 'https://rubygems.org'
 
 gem 'rails', '3.2.3'
 
+gem 'validates_timeliness'
 gem 'truncate_html'
 gem 'pg'
 gem 'page_title_helper'

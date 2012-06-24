@@ -5,11 +5,13 @@ class CreateQuotes < ActiveRecord::Migration
       t.string :phone, :null => false
       t.integer :postcode, :null => false
 
-      t.string :ground_floor, :null => false
+      t.string :ground_floor
       t.string :access_difficulty, :null => false
       t.date :job_completion, :null => false
-      t.string :full_renovation, :null => false
-      t.text :other_renovation, :null => false
+      t.string :full_renovation
+      t.text :other_renovation
+      t.decimal :set_quote, :null => false, :default => 8000.00
+      t.decimal :final_quote, :null => false
 
       t.timestamp :created_at
     end

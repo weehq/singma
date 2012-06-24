@@ -62,6 +62,9 @@ footer {
       width: $column_width;
     }
     .column_2 {
+      a {
+        text-decoration: none;
+      }
       width: $column_width + 2px;
       .faq_label {
         font-size: 16px;
