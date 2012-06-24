@@ -50,6 +50,9 @@ class QuotesController < ApplicationController
 
     respond_to do |format|
       if @quote.save
+        QuoteMailer.delay({:run_at => 1.minutes.from_now}).quote_email(@quote)
+        # QuoteMailer.quote_email(@quote).deliver
+
         format.html { redirect_to new_quote_url, notice: 'Thank you for submitting your details. You will receive an email shortly with the quote.' }
         format.json { render json: @quote, status: :created, location: @quote }
       else

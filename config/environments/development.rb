@@ -52,6 +52,7 @@ Hornsbybathroom::Application.configure do
   }
 
   AppConfig = {
+    :host => 'http://localhost:3000',
     :from_email => 'Singma Bathroom Renovations <testhornsbybathroom@gmail.com>'
   }
 end
