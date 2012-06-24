@@ -5,10 +5,10 @@
   .content {
     padding: 30px 10px 0;
     img {
+      border: none;
       float: left;
       height: 109px;
       margin-right: 15px;
-      // width: 93px;
       width: 109px;
     }
     h1 {
@@ -26,6 +26,7 @@
       }
       a {
         color: $light_grey;
+        text-decoration: none;
         text-shadow: $light_grey 1px 1px 3px;
       }
     }
