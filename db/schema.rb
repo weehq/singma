@@ -22,6 +22,7 @@ ActiveRecord::Schema.define(:version => 20120623022056) do
 
   create_table "quotes", :force => true do |t|
     t.string   "name",                                  :null => false
+    t.string   "email",                                 :null => false
     t.string   "phone",                                 :null => false
     t.integer  "postcode",                              :null => false
     t.string   "ground_floor"
@@ -30,7 +31,7 @@ ActiveRecord::Schema.define(:version => 20120623022056) do
     t.string   "full_renovation"
     t.text     "other_renovation"
     t.decimal  "set_quote",         :default => 8000.0, :null => false
-    t.decimal  "final_quote",       :default => 8000.0, :null => false
+    t.decimal  "final_quote",                           :null => false
     t.datetime "created_at"
   end
 

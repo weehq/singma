@@ -2,6 +2,7 @@ class CreateQuotes < ActiveRecord::Migration
   def up
     create_table :quotes do |t|
       t.string :name, :null => false
+      t.string :email, :null => false
       t.string :phone, :null => false
       t.integer :postcode, :null => false
 
