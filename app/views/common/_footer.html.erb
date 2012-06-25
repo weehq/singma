@@ -5,7 +5,9 @@
 
       <nav>
         <ul>
-          <li><%= link_to truncate_html("<span class='quote'>&#8220;</span> Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.", :omission => " ... (continued)<span class='quote'>&#8221;</span>"), testimonials_path %></li>
+          <% recent_testimonial.each do |testimonial| -%>
+            <li><%= link_to truncate_html("<span class='quote'>&#8220;</span>#{testimonial.comment}", :omission => " ... (continued)<span class='quote'>&#8221;</span>"), testimonials_path %></li>
+          <% end -%>
         </ul>
       </nav>
     </div>
@@ -37,6 +39,7 @@
 
       <nav>
         <ul>
+          <li><%= link_to 'Testimonials', testimonials_path %><span class='link_separator'></span></li>
           <li><%= link_to 'FAQ', '#' %><span class='link_separator'></span></li>
           <li><%= link_to 'Contact Us', contacts_path %>
         </ul>

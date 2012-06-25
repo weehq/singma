@@ -21,6 +21,16 @@ class TestimonialsController < ApplicationController
     end
   end
 
+  def show_recent
+    @testimonial = [Testimonial.first(:offset => rand(Testimonial.count))]
+
+    respond_to do |format|
+      format.html { render action: "show_recent", :layout => false } # show.html.erb
+      format.json { render json: @testimonial }
+    end
+
+  end
+
   # GET /testimonials/new
   # GET /testimonials/new.json
   def new

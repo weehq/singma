@@ -14,6 +14,11 @@
 //= require jquery_ujs
 //= require_tree .
 jQuery(function($) {
+  // Refresh recent testimonial every 2 minutes
+  setInterval(function() {
+    $("footer .column_1 ul").fadeOut().load('/testimonials/show_recent').fadeIn();
+  }, 72000);
+
   // form submit action
   jQuery('.submit_button.process').click(function() {
     jQuery('.submit_button.process').val('Please wait ...');
