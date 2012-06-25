@@ -1,0 +1,10 @@
+<div id='testimonial'>
+  <h2><%= h2 %></h2>
+
+  <% @testimonials.each do |testimonial| -%>
+    <section class='section clearfix'>
+      <p><span class='quote'>&#8220;</span><%= testimonial.comment %><p>
+      <p class='customer'><%= testimonial.name %> of <%= testimonial.suburb %><span class='quote'>&#8221;</span></p>
+    </section>
+  <% end -%>
+</div>

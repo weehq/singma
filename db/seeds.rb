@@ -1,3 +1,4 @@
+require File.expand_path('../seed/testimonials', __FILE__)
 require File.expand_path('../seed/users', __FILE__)
 
 # This file should contain all the record creation needed to seed the database with its default values.

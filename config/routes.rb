@@ -1,4 +1,6 @@
 Hornsbybathroom::Application.routes.draw do
+  resources :testimonials
+
   resources :quotes
 
   devise_for :users, :path => '/', :path_names => {:sign_in => 'login', :sign_out => 'logout'}

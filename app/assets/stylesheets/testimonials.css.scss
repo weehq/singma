@@ -1,0 +1,25 @@
+@import 'common.css.scss';
+
+#testimonial {
+  h2 {
+    background: $light_blue;
+    background: -webkit-linear-gradient($gradient_left_right);
+    background: -moz-linear-gradient($gradient_left_right);
+    background: -ms-linear-gradient($gradient_left_right);
+    background: -o-linear-gradient($gradient_left_right);
+    box-shadow: $shadow_bottom_right;
+    -webkit-box-shadow: $shadow_bottom_right;
+    -moz-box-shadow: $shadow_bottom_right;
+    color: $whiteish;
+    padding: 10px;
+  }
+  section.section {
+    border-bottom: 1px dashed #ccc;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    p.customer {
+      float: right;
+      // font-weight: bold;
+    }
+  }
+}

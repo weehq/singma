@@ -26,6 +26,11 @@ en:
       title:
         - "Contact Us"
         - !ruby/sym other
+  testimonials:
+    index:
+      title:
+        - "Testimonials"
+        - !ruby/sym other
   privacy_policy:
     index:
       title:
