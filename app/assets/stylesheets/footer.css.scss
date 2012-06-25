@@ -1,15 +1,4 @@
-// colors
-$whiteish: #FBFBFB;
-$light_green: #83be7e;
-$dark_green: #5d9651;
-$light_grey: #666;
-$lighter_grey: #CCC;
-
-// linear gradient
-$gradient_top_bottom: top, $dark_green, $light_green;
-
-// box shadow
-$shadow_top_center: 0 -3px 5px $dark_green;
+@import 'common.css.scss';
 
 // width
 $column_width: 306px;
@@ -56,6 +45,9 @@ footer {
     .column_1,
     .column_2 {
       margin-right: 20px;
+      a {
+        text-decoration: none;
+      }
     }
     .column_1,
     .column_3 {
@@ -81,6 +73,7 @@ footer {
     }
     .column_3 .text {
       line-height: 24px;
+      text-decoration: none;
     }
     .importance {
       border-top: 1px solid $whiteish;

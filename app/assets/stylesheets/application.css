@@ -69,6 +69,7 @@ h4 {
 
 p {
   margin: 0 0 10px;
+  padding: 0;
 }
 
 #header,
@@ -89,6 +90,12 @@ footer {
   padding-right: 10px;
 }
 
+footer .quote, #testimonial .quote {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+
 .addthis_toolbox {
   margin: 15px 0;
 }
@@ -108,6 +115,10 @@ footer {
 /* body */
 .main .content {
   padding-bottom: 40px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+section.section {
   padding-left: 10px;
   padding-right: 10px;
 }

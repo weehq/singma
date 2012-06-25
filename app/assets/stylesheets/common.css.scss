@@ -4,6 +4,7 @@ $light_orange: #ffb47d;
 $dark_orange: #e4995f;
 $light_blue: #ced8f3;
 $dark_blue: #afb9d4;
+$light_green: #83be7e;
 $dark_green: #5d9651;
 $light_grey: #666;
 $lighter_grey: #CCC;
@@ -12,13 +13,14 @@ $lighter_grey: #CCC;
 $border_top_bottom: 1px dotted $lighter_grey;
 
 // linear gradient
-$gradient_top_bottom: top, $dark_orange, $light_orange;
+$gradient_top_bottom: top, $dark_green, $light_green;
 $gradient_left_right: left, $dark_blue, $light_blue;
 $gradient_right_left: right, $dark_blue, $light_blue;
 
 // box shadow
 $shadow_bottom_center: 0 3px 5px $dark_orange;
 $shadow_bottom_right: 3px 3px 5px $light_blue;
+$shadow_top_center: 0 -3px 5px $dark_green;
 
 // form
 form {

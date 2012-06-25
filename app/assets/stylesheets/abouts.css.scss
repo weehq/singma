@@ -1,16 +1,4 @@
-// Place all the styles related to the terms_of_use controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
-// colors
-$whiteish: #FBFBFB;
-$light_blue: #ced8f3;
-$dark_blue: #afb9d4;
-
-// linear gradient
-$gradient_left_right: left, $dark_blue, $light_blue;
-
-// box shadow
-$shadow_bottom_right: 3px 3px 5px $light_blue;
+@import 'common.css.scss';
 
 #about_us {
   h2 {
@@ -24,9 +12,5 @@ $shadow_bottom_right: 3px 3px 5px $light_blue;
     -moz-box-shadow: $shadow_bottom_right;
     color: $whiteish;
     padding: 10px;
-  }
-  p {
-    padding-left: 10px;
-    padding-right: 10px;
   }
 }
