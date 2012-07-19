@@ -5,6 +5,8 @@ class CreateTestimonials < ActiveRecord::Migration
       t.string :suburb
       t.text :comment
 
+      t.string :active, :null => false, :default => 'Y'
+
       t.timestamp :created_at
       t.timestamp :updated_at
     end

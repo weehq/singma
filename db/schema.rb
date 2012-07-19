@@ -65,6 +65,7 @@ ActiveRecord::Schema.define(:version => 20120625042725) do
     t.string   "name"
     t.string   "suburb"
     t.text     "comment"
+    t.string   "active",     :default => "Y", :null => false
     t.datetime "created_at"
     t.datetime "updated_at"
   end
