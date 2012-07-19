@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Suburb:</b>
+  <%= @location.suburb %>
+</p>
+
+<p>
+  <b>Postcode:</b>
+  <%= @location.postcode %>
+</p>
+
+<p>
+  <b>Active:</b>
+  <%= @location.active %>
+</p>
+
+<p>
+  <b>Created at:</b>
+  <%= @location.created_at %>
+</p>
+
+
+<%= link_to 'Edit', edit_location_path(@location) %> |
+<%= link_to 'Back', locations_path %>

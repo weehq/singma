@@ -21,13 +21,23 @@
     float: left;
     margin-right: 15px;
     width: 474px;
+    .important-message {
+      color: #afb9d4;
+      font-size: 24px;
+      margin-bottom: 10px;
+      margin-left: 10px;
+      margin-right: 10px;
+      padding: 10px;
+      text-align: center;
+      width: auto;
+    }
   }
   .quote {
     float: left;
     width: 470px;
   }
   form {
-    border-left: 1px dotted $lighter_grey;
+    border-left: 1px dashed $lighter_grey;
   }
   table {
     padding-left: 10px;

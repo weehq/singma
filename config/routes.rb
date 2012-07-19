@@ -1,4 +1,6 @@
 Hornsbybathroom::Application.routes.draw do
+  resources :locations
+
   resources :testimonials do
     collection do
       get :show_recent

@@ -4,6 +4,7 @@
   margin-bottom: 40px;
   .content {
     padding: 30px 10px 0;
+    position: relative;
     img {
       border: none;
       float: left;
@@ -29,6 +30,13 @@
         text-decoration: none;
         text-shadow: $light_grey 1px 1px 3px;
       }
+    }
+    .licence-number {
+      color: #ccc;
+      font-size: 16px;
+      left: 216px;
+      position: absolute;
+      top: 105px;
     }
   }
   .main_menu {

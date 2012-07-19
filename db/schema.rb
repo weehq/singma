@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120625042725) do
+ActiveRecord::Schema.define(:version => 20120719120554) do
 
   create_table "contacts", :force => true do |t|
     t.string   "name",                  :null => false
@@ -43,6 +43,16 @@ ActiveRecord::Schema.define(:version => 20120625042725) do
   end
 
   add_index "delayed_jobs", ["priority", "run_at"], :name => "delayed_jobs_priority"
+
+  create_table "locations", :force => true do |t|
+    t.integer  "postcode"
+    t.string   "suburb"
+    t.string   "active",     :default => "Y", :null => false
+    t.datetime "created_at"
+  end
+
+  add_index "locations", ["postcode"], :name => "index_locations_on_postcode"
+  add_index "locations", ["suburb"], :name => "index_locations_on_suburb"
 
   create_table "quotes", :force => true do |t|
     t.string   "name",                                  :null => false

@@ -17,6 +17,11 @@ en:
       title:
         - "Get a Quote"
         - !ruby/sym other
+  locations:
+    index:
+      title:
+        - "Locations"
+        - !ruby/sym other
   contacts:
     index:
       title:

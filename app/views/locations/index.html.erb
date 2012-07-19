@@ -1,0 +1,19 @@
+<div id='location'>
+  <h2><%= h2 %></h2>
+
+  <p>On the keyboard, press '<strong>Alt + F</strong>' to show search box.</p>
+
+  <table cellpadding='10' cellspacing='0'>
+    <tr>
+      <th>Postcode</th>
+      <th>Suburb</th>
+    </tr>
+
+    <% @locations.each do |location| -%>
+      <tr>
+        <td><%= location.postcode %></td>
+        <td><%= location.suburb %></td>
+      </tr>
+    <% end -%>
+  </table>
+</div>
