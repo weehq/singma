@@ -1,11 +1,13 @@
 <div id='testimonial'>
   <h2><%= h2 %></h2>
 
-  <% @testimonials.each do |testimonial| -%>
-    <section class='section clearfix'>
-      <p><span class='quote'>&#8220;</span><%= testimonial.comment %><p>
-      <p class='customer'><%= testimonial.name %> of <%= testimonial.suburb %><span class='quote'>&#8221;</span></p>
-      <%= link_to 'EDIT', edit_testimonial_path(testimonial.id), :class=> 'submit_button' %>
-    </section>
+  <% if @testimonials.present? -%>
+    <% @testimonials.each do |testimonial| -%>
+      <section class='section clearfix'>
+        <p><span class='quote'>&#8220;</span><%= testimonial.comment %><p>
+        <p class='customer'><%= testimonial.name %> of <%= testimonial.suburb %><span class='quote'>&#8221;</span></p>
+        <%= link_to 'EDIT', edit_testimonial_path(testimonial.id), :class=> 'submit_button' %>
+      </section>
+    <% end -%>
   <% end -%>
 </div>
