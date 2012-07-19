@@ -3,13 +3,15 @@
     <div class='column_1'>
       <h2>Testimonials</h2>
 
-      <nav>
-        <ul>
-          <% recent_testimonial.each do |testimonial| -%>
-            <li><%= link_to truncate_html("<span class='quote'>&#8220;</span>#{testimonial.comment}", :omission => " ... (continued)<span class='quote'>&#8221;</span>"), testimonials_path %></li>
-          <% end -%>
-        </ul>
-      </nav>
+      <% if recent_testimonial.present? -%>
+        <nav>
+          <ul>
+            <% recent_testimonial.each do |testimonial| -%>
+              <li><%= link_to truncate_html("<span class='quote'>&#8220;</span>#{testimonial.comment}", :omission => " ... (continued)<span class='quote'>&#8221;</span>"), testimonials_path %></li>
+            <% end -%>
+          </ul>
+        </nav>
+      <% end -%>
     </div>
 
     <div class='column_2'>
