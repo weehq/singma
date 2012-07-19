@@ -31,6 +31,10 @@ en:
       title:
         - "Testimonials"
         - !ruby/sym other
+    new:
+      title:
+        - "Post Testimonial"
+        - !ruby/sym other
   privacy_policy:
     index:
       title:

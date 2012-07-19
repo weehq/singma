@@ -11,23 +11,21 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :name %><br />
+  <div class="field clearfix">
+    <%= f.label :name %>
     <%= f.text_field :name %>
   </div>
-  <div class="field">
-    <%= f.label :comment %><br />
+  <div class="field clearfix">
+    <%= f.label :suburb %>
+    <%= f.text_field :suburb %>
+  </div>
+  <div class="field clearfix">
+    <%= f.label :comment %>
     <%= f.text_area :comment %>
   </div>
-  <div class="field">
-    <%= f.label :created_at %><br />
-    <%= f.datetime_select :created_at %>
-  </div>
-  <div class="field">
-    <%= f.label :updated_at %><br />
-    <%= f.datetime_select :updated_at %>
-  </div>
+
   <div class="actions">
-    <%= f.submit %>
+    <label for='commit'>&nbsp;</label>
+    <%= f.submit('Submit', :title => 'Submit', :class => 'submit_button process') %>
   </div>
-<% end %>
+<% end -%>

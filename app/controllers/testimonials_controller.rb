@@ -2,7 +2,7 @@ class TestimonialsController < ApplicationController
   # GET /testimonials
   # GET /testimonials.json
   def index
-    @testimonials = Testimonial.all
+    @testimonials = Testimonial.order('updated_at DESC')
 
     respond_to do |format|
       format.html # index.html.erb
@@ -34,6 +34,8 @@ class TestimonialsController < ApplicationController
   # GET /testimonials/new
   # GET /testimonials/new.json
   def new
+    authenticate_user!
+
     @testimonial = Testimonial.new
 
     respond_to do |format|
@@ -44,6 +46,8 @@ class TestimonialsController < ApplicationController
 
   # GET /testimonials/1/edit
   def edit
+    authenticate_user!
+
     @testimonial = Testimonial.find(params[:id])
   end
 
@@ -54,7 +58,7 @@ class TestimonialsController < ApplicationController
 
     respond_to do |format|
       if @testimonial.save
-        format.html { redirect_to @testimonial, notice: 'Testimonial was successfully created.' }
+        format.html { redirect_to testimonials_path, notice: 'Testimonial was successfully posted.' }
         format.json { render json: @testimonial, status: :created, location: @testimonial }
       else
         format.html { render action: "new" }
@@ -70,7 +74,7 @@ class TestimonialsController < ApplicationController
 
     respond_to do |format|
       if @testimonial.update_attributes(params[:testimonial])
-        format.html { redirect_to @testimonial, notice: 'Testimonial was successfully updated.' }
+        format.html { redirect_to testimonials_path, notice: 'Testimonial was successfully updated.' }
         format.json { head :no_content }
       else
         format.html { render action: "edit" }
