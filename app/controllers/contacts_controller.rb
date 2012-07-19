@@ -48,7 +48,7 @@ class ContactsController < ApplicationController
       if @contact.save
         ContactMailer.confirm_email(@contact).deliver
 
-        format.html { redirect_to contacts_url, notice: 'Thank you for contacting us. We will endeavour to contact you as soon as possible.' }
+        format.html { redirect_to contacts_url, notice: 'Thank you for contacting us. A representative will endeavour to contact you as soon as possible.' }
         format.json { render json: @contact, status: :created, location: @contact }
       else
         format.html { render action: "index" }

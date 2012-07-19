@@ -28,23 +28,23 @@
   </div>
   <div class="field clearfix">
     <%= f.label :ground_floor %>
-    <%= f.check_box :ground_floor, {}, 'Y' %>
+    <%= f.check_box :ground_floor, {:checked => true}, 'Y' %>
   </div>
   <div class="field clearfix">
     <%= f.label :access_difficulty %>
     <%= f.select :access_difficulty, "<option>Easy</option><option>Difficult</option>".html_safe, :prompt => "Select" %>
   </div>
-  <div class="field clearfix">
-    <%= f.label :job_completion %>
-    <%= f.date_select :job_completion, :start_year => Time.now.year, :end_year => Time.now.year+2, :max_years_allowed => Time.now.year+2, :prompt => { :day => 'Select Day', :month => 'Select Month', :year => 'Select Year' } %>
-  </div>
+<!--  <div class="field clearfix">-->
+    <%#= f.label :job_completion %>
+    <%#= f.date_select :job_completion, :start_year => Time.now.year, :end_year => Time.now.year, :max_years_allowed => Time.now.year+2, :prompt => { :day => 'Select Day', :month => 'Select Month', :year => 'Select Year' } %>
+<!--  </div>-->
   <div class="field clearfix">
     <%= f.label :full_renovation %>
-    <%= f.check_box :full_renovation, {}, 'Y' %>
+    <%= f.check_box :full_renovation, {:checked => true}, 'Y' %>
   </div>
   <div class="field clearfix">
     <%= f.label :other_comments %>
-    <%= f.text_area :other_comments %>
+    <%= f.text_area :other_comments, :rows => '10' %>
   </div>
 
   <div class="actions clearfix">
