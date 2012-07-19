@@ -6,8 +6,10 @@
       <section class='section clearfix'>
         <p><span class='quote'>&#8220;</span><%= testimonial.comment %><p>
         <p class='customer'><%= testimonial.name %> of <%= testimonial.suburb %><span class='quote'>&#8221;</span></p>
-        <%= link_to 'EDIT', edit_testimonial_path(testimonial.id), :class=> 'submit_button', :style => 'margin-right: 10px;' %>
-        <%= link_to 'DELETE', testimonial, confirm: 'Are you sure?', method: :delete, :class=> 'submit_button' %>
+        <% if user_signed_in? -%>
+          <%= link_to 'EDIT', edit_testimonial_path(testimonial.id), :class=> 'submit_button', :style => 'margin-right: 10px;' %>
+          <%= link_to 'DELETE', testimonial, confirm: 'Are you sure?', method: :delete, :class=> 'submit_button' %>
+        <% end -%>
       </section>
     <% end -%>
   <% end -%>
