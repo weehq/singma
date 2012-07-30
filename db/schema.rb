@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120719120554) do
+ActiveRecord::Schema.define(:version => 20120729225855) do
 
   create_table "contacts", :force => true do |t|
     t.string   "name",                  :null => false
@@ -43,6 +43,15 @@ ActiveRecord::Schema.define(:version => 20120719120554) do
   end
 
   add_index "delayed_jobs", ["priority", "run_at"], :name => "delayed_jobs_priority"
+
+  create_table "galleries", :force => true do |t|
+    t.string   "title",                        :null => false
+    t.text     "description"
+    t.string   "image",                        :null => false
+    t.string   "active",      :default => "Y", :null => false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "locations", :force => true do |t|
     t.integer  "postcode"

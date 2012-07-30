@@ -1,4 +1,6 @@
 Hornsbybathroom::Application.routes.draw do
+  resources :galleries, :path => 'gallery'
+
   resources :locations
 
   resources :testimonials do

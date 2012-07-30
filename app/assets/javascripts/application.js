@@ -14,6 +14,18 @@
 //= require jquery_ujs
 //= require_tree .
 jQuery(function($) {
+  if (location.pathname.match(/gallery$/)) {
+    // Galleria Slider
+    // Load the classic theme
+    Galleria.loadTheme('/assets/galleria/galleria.classic.min.js');
+    // Initialize Galleria
+    $('#galleria').galleria({
+      width: 600,
+      height: 360,
+      transition: 'fade'
+    });
+  }
+
   // Refresh recent testimonial every 2 minutes
   setInterval(function() {
     $("footer .column_1 ul").fadeOut().load('/testimonials/show_recent').fadeIn();

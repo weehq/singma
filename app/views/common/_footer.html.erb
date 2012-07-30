@@ -16,19 +16,20 @@
 
     <div class='column_2'>
       <h2>Recent FAQ</h2>
-
+      <% if request.url.match(/faq/) -%>
       <nav>
         <ul>
           <li><span class='faq_label'>Q:</span>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua?</span></li>
           <li><span class='faq_label'>A:</span><%= link_to truncate_html("Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet."), '#' %></li>
         </ul>
       </nav>
+      <% end -%>
     </div>
 
     <div class='column_3'>
       <h2>About Us</h2>
 
-      <%= link_to truncate_html("Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet."), abouts_path, :class => 'text' %>
+      <%= link_to truncate_html("Fully licensed bathroom renovation team with more than 20 years experience. We are committed to top quality workmanship and customer satisfaction. Obligation free site inspection, advise and quoting service. Competitive fixed price quote for your peace of mind. Stress free and no fuss, have your bathroom professionally designed and built by us, a bathroom that you will show off to everyone."), abouts_path, :class => 'text' %>
 
       <!-- AddThis Button BEGIN -->
       <div class="addthis_toolbox addthis_default_style ">
@@ -42,7 +43,9 @@
       <nav>
         <ul>
           <li><%= link_to 'Testimonials', testimonials_path %><span class='link_separator'></span></li>
+          <% if request.url.match(/faq/) -%>
           <li><%= link_to 'FAQ', '#' %><span class='link_separator'></span></li>
+          <% end -%>
           <li><%= link_to 'Contact Us', contacts_path %>
         </ul>
       </nav>
