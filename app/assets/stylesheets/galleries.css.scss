@@ -1,3 +1,10 @@
+@import 'common.css.scss';
+
 .galleria-container {
   // margin: 0 auto;
+  background-color: $dark_grey;
+  border: 1px solid $dark_grey;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
 }
