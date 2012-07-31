@@ -72,22 +72,22 @@ Hornsbybathroom::Application.configure do
 
 # Suggested by Devise gem
   # Need for link_to
-  config.action_mailer.default_url_options = { :host => "hornsbybathroom.heroku.com" }
+  config.action_mailer.default_url_options = { :host => "singma.com.au" }
 
   # Need for image_tag
-  config.action_mailer.asset_host = "http://hornsbybathroom.heroku.com"
+  config.action_mailer.asset_host = "http://singma.com.au"
 
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = {
     :address  => "smtp.gmail.com",
     :port  => 587,
-    :user_name  => "hornsbybathroom@gmail.com",
-    :password  => "bathroomhornsby2013",
+    :user_name  => "admin@singma.com.au",
+    :password  => "Singma2012",
     :authentication  => :plain
   }
 
   AppConfig = {
-    :host => 'http://hornsbybathroom.heroku.com',
-    :from_email => 'Singma Bathroom Renovations <hornsbybathroom@gmail.com>'
+    :host => 'http://singma.com.au',
+    :from_email => 'Singma Bathroom Renovations <admin@singma.com.au>'
   }
 end
