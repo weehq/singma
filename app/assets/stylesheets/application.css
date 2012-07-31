@@ -72,6 +72,10 @@ p {
   padding: 0;
 }
 
+img {
+  border: none;
+}
+
 #header,
 .main,
 footer {
