@@ -20,8 +20,8 @@ jQuery(function($) {
     Galleria.loadTheme('/assets/galleria/galleria.classic.min.js');
     // Initialize Galleria
     $('#galleria').galleria({
-      width: 600,
-      height: 360,
+      width: 620,
+      height: 370,
       transition: 'fade'
     });
   }
