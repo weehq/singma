@@ -1,5 +1,5 @@
 class ContactMailer < ActionMailer::Base
-  default from: AppConfig[:from_email], bcc: "hornsbybathroom@gmail.com"
+  default from: AppConfig[:from_email], bcc: "admin@singma.com.au"
 
   include ActionView::Helpers::NumberHelper
 
