@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120729225855) do
+ActiveRecord::Schema.define(:version => 20120731040404) do
 
   create_table "contacts", :force => true do |t|
     t.string   "name",                  :null => false
@@ -70,7 +70,7 @@ ActiveRecord::Schema.define(:version => 20120729225855) do
     t.integer  "postcode",                              :null => false
     t.string   "ground_floor"
     t.string   "access_difficulty",                     :null => false
-    t.date     "job_completion",                        :null => false
+    t.date     "job_completion"
     t.string   "full_renovation"
     t.text     "other_comments"
     t.decimal  "set_quote",         :default => 8000.0, :null => false
