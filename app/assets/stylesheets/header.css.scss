@@ -58,6 +58,13 @@
     }
     .left_menu {
       float: left;
+      .home-link {
+        background: url(/assets/home.png);
+        display: block;
+        height: 15px;
+        text-indent: -9999px;
+        width: 17px;
+      }
     }
     .right_menu {
       float: right;

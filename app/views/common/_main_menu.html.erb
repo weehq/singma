@@ -2,8 +2,8 @@
   <div class='content clearfix'>
     <nav>
       <ul class='left_menu clearfix'>
-        <li><%= link_to 'Home', root_path %><span class='link_separator'></span></li>
-        <li><%= link_to 'Get a Quote', root_path %><span class='link_separator'></span></li>
+        <li><%= link_to 'Home', root_path, :class => 'home-link' %></li>
+        <li><span class='link_separator'></span><%= link_to 'Get a Quote', root_path %><span class='link_separator'></span></li>
         <li><%= link_to 'Gallery', galleries_path %><span class='link_separator'></span></li>
         <li><%= link_to 'Site Map', site_map_index_path %></li>
       </ul>
