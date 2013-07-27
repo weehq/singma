@@ -1,55 +1,89 @@
 source 'https://rubygems.org'
 
-gem 'rails', '3.2.3'
+ruby '2.0.0'
 
-gem 'validates_timeliness'
-gem 'truncate_html'
+# Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
+gem 'rails', '4.0.0'
+
+# https://devcenter.heroku.com/articles/rails-integration-gems
+gem 'rails_12factor'
+
+# Use postgresql as the database for Active Record
 gem 'pg'
-gem 'page_title_helper'
-gem 'kaminari'
-gem 'heroku'
-gem 'dynamic_form'
-gem 'devise'
-gem 'delayed_job_active_record'
-gem 'hirefire' # Must be installed after delayed_job_active_record
-gem 'daemons'
-gem 'custom_error_message'
-gem 'cancan'
-gem 'asset_sync','> 0.2.4'
 
-# Bundle edge Rails instead:
-# gem 'rails', :git => 'git://github.com/rails/rails.git'
+# Use SCSS for stylesheets
+gem 'sass-rails', '~> 4.0.0'
 
-# Gems used only for assets and not required
-# in production environments by default.
-group :assets do
-  gem 'sass-rails',   '~> 3.2.3'
-  gem 'coffee-rails', '~> 3.2.1'
+# Use Uglifier as compressor for JavaScript assets
+gem 'uglifier', '>= 1.3.0'
 
-  # See https://github.com/sstephenson/execjs#readme for more supported runtimes
-  # gem 'therubyracer', :platform => :ruby
+# Use CoffeeScript for .js.coffee assets and views
+gem 'coffee-rails', '~> 4.0.0'
 
-  gem 'uglifier', '>= 1.0.3'
-end
-
+# Use jquery as the JavaScript library
 gem 'jquery-rails'
 
-# To use ActiveModel has_secure_password
-# gem 'bcrypt-ruby', '~> 3.0.0'
+# Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
+gem 'turbolinks'
 
-# To use Jbuilder templates for JSON
-# gem 'jbuilder'
+# Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
+gem 'jbuilder', '~> 1.2'
 
-# Use unicorn as the app server
-# gem 'unicorn'
+# https://github.com/adzap/validates_timeliness
+gem 'validates_timeliness'
 
-# Deploy with Capistrano
-# gem 'capistrano'
+# https://github.com/hgmnz/truncate_html
+gem 'truncate_html'
 
-# To use debugger
-# gem 'ruby-debug19', :require => 'ruby-debug'
+# https://github.com/lwe/page_title_helper
+gem 'page_title_helper'
 
-group :production do
-  gem 'therubyracer', '>=0.9.9'
-  gem 'newrelic_rpm', '>=3.3.0'
+# https://github.com/amatsuda/kaminari
+gem 'kaminari'
+
+# https://github.com/johngrimes/dynamic_form
+gem 'dynamic_form'
+
+# https://github.com/plataformatec/devise
+gem 'devise'
+
+# https://github.com/collectiveidea/delayed_job_active_record
+gem 'delayed_job_active_record', '4.0.0.beta2'
+
+# https://github.com/meskyanichi/hirefire
+gem 'hirefire' # Must be installed after delayed_job_active_record
+
+# https://rubygems.org/gems/daemons
+gem 'daemons'
+
+# http://rubygems.org/gems/custom_error_message
+gem 'custom_error_message'
+
+# https://github.com/ryanb/cancan
+gem 'cancan'
+
+# https://github.com/rumblelabs/asset_sync
+gem 'asset_sync','> 0.2.4'
+
+# https://github.com/rails/protected_attributes
+gem 'protected_attributes'
+
+# bundle exec rake doc:rails generates the API under doc/api.
+gem 'sdoc', require: false, group: :doc
+
+# Use debugger
+gem 'debugger', group: [ :development, :test ]
+
+group :development do
+	# https://github.com/dewski/kss-rails
+	gem 'kss-rails'
+
+	# https://github.com/macournoyer/thin/
+	gem 'thin'
 end
+
+# https://github.com/rspec/rspec-rails
+gem 'rspec-rails', '~> 2.0', group: :test
+
+# https://github.com/newrelic/rpm
+gem 'newrelic_rpm', group: :production
