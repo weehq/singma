@@ -1,8 +1,8 @@
 AssetSync.configure do |config|
   config.fog_provider = 'AWS'
-  config.aws_access_key_id = ENV['AWS_ACCESS_KEY_ID']
-  config.aws_secret_access_key = ENV['AWS_SECRET_ACCESS_KEY']
-  config.fog_directory = ENV['FOG_DIRECTORY']
+  config.aws_access_key_id = 'AKIAIRSHP5CQAJL3C6PQ'
+  config.aws_secret_access_key = '5rrw1vcm023TtTqSgdjrFppQMc7G0rjce/dNTREi'
+  config.fog_directory = 'hornsbybathroom-assets'
 
   # Increase upload performance by configuring your region
   config.fog_region = 'us-east-1'
