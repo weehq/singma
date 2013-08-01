@@ -80,6 +80,8 @@ group :development do
 
 	# https://github.com/macournoyer/thin/
 	gem 'thin'
+
+	gem 'therubyracer'
 end
 
 # https://github.com/rspec/rspec-rails

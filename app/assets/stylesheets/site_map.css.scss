@@ -1,10 +1,13 @@
 // Place all the styles related to the terms_of_use controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+@import 'common.css.scss';
+
 // colors
 $whiteish: #FBFBFB;
 $light_blue: #ced8f3;
 $dark_blue: #afb9d4;
+
 
 // linear gradient
 $gradient_left_right: left, $dark_blue, $light_blue;
@@ -14,14 +17,14 @@ $shadow_bottom_right: 3px 3px 5px $light_blue;
 
 #site_map {
   h2 {
-    background: $light_blue;
-    background: -webkit-linear-gradient($gradient_left_right);
-    background: -moz-linear-gradient($gradient_left_right);
-    background: -ms-linear-gradient($gradient_left_right);
-    background: -o-linear-gradient($gradient_left_right);
-    box-shadow: $shadow_bottom_right;
-    -webkit-box-shadow: $shadow_bottom_right;
-    -moz-box-shadow: $shadow_bottom_right;
+    background: $light_grey;
+    background: -webkit-linear-gradient($gradient_top_bottom);
+    background: -moz-linear-gradient($gradient_top_bottom);
+    background: -ms-linear-gradient($gradient_top_bottom);
+    background: -o-linear-gradient($gradient_top_bottom);
+    // box-shadow: $shadow_bottom_right;
+    // -webkit-box-shadow: $shadow_bottom_right;
+    // -moz-box-shadow: $shadow_bottom_right;
     color: $whiteish;
     padding: 10px;
   }

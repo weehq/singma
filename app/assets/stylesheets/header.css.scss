@@ -15,38 +15,44 @@
     h1 {
       display: inline-block;
       float: left;
+      font-family: 'Century Gothic', Arial, Helvetica, sans-serif;
+      font-weight: normal;
       line-height: 109px;
       .orange {
-        color: $dark_orange;
+        color: $light_grey;
       }
       .blue {
-        color: $dark_blue;
+        color: $light_grey;
       }
       .green {
-        color: $dark_green;
+        color: $light_grey;
       }
       a {
         color: $light_grey;
         text-decoration: none;
-        text-shadow: $light_grey 1px 1px 3px;
+        // text-shadow: $light_grey 1px 1px 3px;
       }
     }
     .licence-number {
       color: #ccc;
-      font-size: 16px;
+      font-size: 13px;
       left: 216px;
       position: absolute;
       top: 105px;
     }
   }
   .main_menu {
-    background: $dark_orange;
-    box-shadow: $shadow_bottom_center;
-    -webkit-box-shadow: $shadow_bottom_center;
-    -moz-box-shadow: $shadow_bottom_center;
+    background: $light_grey;
+    box-shadow: $shadow_bottom_only;
+    -webkit-box-shadow: $shadow_bottom_only;
+    -moz-box-shadow: $shadow_bottom_only;
     color: $whiteish;
     a {
       color: $whiteish;
+    }
+    a:hover {
+      color: $dark_orange;
+      text-decoration: none;
     }
     .content {
       padding: 5px 10px;

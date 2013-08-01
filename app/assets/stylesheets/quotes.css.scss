@@ -2,14 +2,14 @@
 
 #home, #quote {
   h2 {
-    background: $light_blue;
-    background: -webkit-linear-gradient($gradient_left_right);
-    background: -moz-linear-gradient($gradient_left_right);
-    background: -ms-linear-gradient($gradient_left_right);
-    background: -o-linear-gradient($gradient_left_right);
-    box-shadow: $shadow_bottom_right;
-    -webkit-box-shadow: $shadow_bottom_right;
-    -moz-box-shadow: $shadow_bottom_right;
+    background: $light_grey;
+    // background: -webkit-linear-gradient($gradient_top_bottom);
+    // background: -moz-linear-gradient($gradient_top_bottom);
+    // background: -ms-linear-gradient($gradient_top_bottom);
+    // background: -o-linear-gradient($gradient_top_bottom);
+    box-shadow: $shadow_bottom_only;
+    -webkit-box-shadow: $shadow_bottom_only;
+    -moz-box-shadow: $shadow_bottom_only;
     color: $whiteish;
     padding: 10px;
   }
@@ -22,7 +22,7 @@
     margin-right: 15px;
     width: 474px;
     .important-message {
-      color: #afb9d4;
+      color: $light_grey;
       font-size: 24px;
       margin-bottom: 10px;
       margin-left: 10px;

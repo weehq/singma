@@ -108,6 +108,7 @@ GEM
       rails (>= 3.0.0)
     launchy (2.3.0)
       addressable (~> 2.3)
+    libv8 (3.11.8.17)
     mail (2.5.4)
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
@@ -153,6 +154,7 @@ GEM
     rake (10.1.0)
     rdoc (3.12.2)
       json (~> 1.4)
+    ref (1.0.5)
     rest-client (1.6.7)
       mime-types (>= 1.16)
     rspec-core (2.14.4)
@@ -189,6 +191,9 @@ GEM
       actionpack (>= 3.0)
       activesupport (>= 3.0)
       sprockets (~> 2.8)
+    therubyracer (0.11.4)
+      libv8 (~> 3.11.8.12)
+      ref
     thin (1.5.1)
       daemons (>= 1.0.9)
       eventmachine (>= 0.12.6)
@@ -240,6 +245,7 @@ DEPENDENCIES
   rspec-rails (~> 2.0)
   sass-rails (~> 4.0.0)
   sdoc
+  therubyracer
   thin
   truncate_html
   turbolinks
