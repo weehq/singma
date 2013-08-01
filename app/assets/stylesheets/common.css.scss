@@ -28,6 +28,16 @@ $shadow_bottom_only: inset 0 -10px 10px -10px $dark_grey;
 // media queries
 $mobile_max: 568px;
 
+// h2
+h2.box_heading {
+  background: $light_grey;
+  box-shadow: $shadow_bottom_only;
+  -webkit-box-shadow: $shadow_bottom_only;
+  -moz-box-shadow: $shadow_bottom_only;
+  color: $whiteish;
+  padding: 10px;
+}
+
 // form
 form {
   padding-left: 10px;
