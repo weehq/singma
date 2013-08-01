@@ -28,16 +28,6 @@ $shadow_bottom_only: inset 0 -10px 10px -10px $dark_grey;
 // media queries
 $mobile_max: 568px;
 
-// h2
-h2.box_heading {
-  background: $light_grey;
-  box-shadow: $shadow_bottom_only;
-  -webkit-box-shadow: $shadow_bottom_only;
-  -moz-box-shadow: $shadow_bottom_only;
-  color: $whiteish;
-  padding: 10px;
-}
-
 // form
 form {
   padding-left: 10px;
@@ -132,13 +122,17 @@ a.submit_button {
     .content {
       padding: 20px 10px 0;
       h1 {
-        font-size: 30px;
+        font-size: 36px;
         line-height: 34px;
-        .orange {
-          margin-top: -5px;
-        }
-        .orange, .blue, .green {
+        .singma, .bathroom {
           display: block;
+        }
+        .bathroom {
+          margin-top: 5px;
+        }
+        .renovations {
+          left: 19p8x;
+          top: 79px;
         }
       }
       .licence-number {
@@ -150,8 +144,7 @@ a.submit_button {
   .main .content {
     width: auto;
   }
-  #home,
-  #quote {
+  #home, #quote {
     .intro {
       float: none;
       margin: 0 auto;
