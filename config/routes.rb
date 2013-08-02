@@ -25,8 +25,6 @@ Singma::Application.routes.draw do
 
   resources :abouts, :path => 'about-us'
 
-  resources :site_map, :path => 'site-map'
-
   # You can have the root of your site routed with "root"
   root :to => 'quotes#new'
 end

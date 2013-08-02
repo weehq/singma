@@ -1,7 +1,7 @@
 @import "common.css.scss";
 
 #header {
-  margin-bottom: 40px;
+  margin-bottom: 25px;
   .content {
     padding: 30px 10px 0;
     position: relative;
@@ -18,23 +18,16 @@
       font-family: 'Century Gothic', Arial, Helvetica, sans-serif;
       font-weight: normal;
       line-height: 109px;
-      .orange {
-        color: $light_grey;
-      }
-      .blue {
-        color: $light_grey;
-      }
-      .green {
+      .singma, .bathroom, .renovations {
         color: $light_grey;
       }
       a {
         color: $light_grey;
         text-decoration: none;
-        // text-shadow: $light_grey 1px 1px 3px;
       }
     }
     .licence-number {
-      color: #ccc;
+      color: $lighter_grey;
       font-size: 13px;
       left: 216px;
       position: absolute;
@@ -42,7 +35,7 @@
     }
   }
   .main_menu {
-    background: $light_grey;
+    background: url("/assets/backgrounds/header-footer-background.png") repeat scroll 0 0 $light_grey;
     box-shadow: $shadow_bottom_only;
     -webkit-box-shadow: $shadow_bottom_only;
     -moz-box-shadow: $shadow_bottom_only;
@@ -51,7 +44,7 @@
       color: $whiteish;
     }
     a:hover {
-      color: $dark_orange;
+      color: $light_orange;
       text-decoration: none;
     }
     .content {
@@ -65,11 +58,8 @@
     .left_menu {
       float: left;
       .home-link {
-        background: url(/assets/home.png);
-        display: block;
-        height: 15px;
-        text-indent: -9999px;
-        width: 17px;
+        font-size: 20px;
+        line-height: 15px;
       }
     }
     .right_menu {

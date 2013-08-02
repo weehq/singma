@@ -15,10 +15,6 @@
 /* common */
 body {
   background: #fbfbfb;
-  background: -webkit-linear-gradient(bottom, #fff, #fbfbfb);
-  background: -moz-linear-gradient(bottom, #fff, #fbfbfb);
-  background: -ms-linear-gradient(bottom, #fff, #fbfbfb);
-  background: -o-linear-gradient(bottom, #fff, #fbfbfb);
   color: #666;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 13px;
@@ -43,7 +39,7 @@ h4 {
 }
 
 h1 {
-  font-size: 32px;
+  font-size: 36px;
   line-height: 32px;
   margin: 0;
   padding: 0;
