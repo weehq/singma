@@ -4,8 +4,6 @@ $light_orange: #f38630;
 $lightish_orange: #ea7a2a;
 $dark_orange: #fa6900;
 $darkish_orange: #f56100;
-$light_blue: #ced8f3;
-$dark_blue: #afb9d4;
 $light_green: #83be7e;
 $dark_green: #5d9651;
 $light_grey: #6e6d71;
@@ -17,12 +15,9 @@ $border_top_bottom: 1px dotted $lighter_grey;
 
 // linear gradient
 $gradient_top_bottom: top, $lighter_grey, $light_grey;
-// $gradient_left_right: left, $dark_blue, $light_blue;
-// $gradient_right_left: right, $dark_blue, $light_blue;
 
 // box shadow
 $shadow_bottom_center: 0 3px 5px $light_orange;
-// $shadow_bottom_right: 3px 3px 5px $light_blue;
 // $shadow_top_center: 0 -3px 5px $dark_green;
 $shadow_top_only: inset 0 10px 10px -10px $dark_grey;
 $shadow_bottom_only: inset 0 -10px 10px -10px $dark_grey;
@@ -198,41 +193,28 @@ a.submit_button {
     }
   }
   footer {
-    h2 {
-      border-bottom: 1px dotted $lighter_grey;
-      padding: 0 0 20px;
-      width: auto;
-    }
-    a {
-      color: $whiteish;
-    }
-    ul {
-      list-style: none;
-      margin: 0;
-      padding: 0;
-    }
     ul li {
       float: none;
-      line-height: 24px;
-      margin-left: 5px;
-      margin-right: 5px;
     }
     .content {
-      padding: 30px 10px 40px;
-      width: auto;
       .column_1,
       .column_2,
       .column_3 {
         float: none;
-        margin-right: 0;
-        width: auto;
+        width: 100%;
       }
       .importance {
         text-align: center;
-        width: auto;
+      }
+      .importance .copyright {
+        padding-left: 0;
+      }
+      .importance .copyright .abn_reserved {
+        display: block;
       }
       .importance nav {
         float: none;
+        padding-right: 0;
       }
       .importance nav li {
         display: inline-block;
@@ -244,7 +226,7 @@ a.submit_button {
         display: inline-block;
       }
       .link_separator {
-        margin-right: 3px;
+        margin-right: 5px;
       }
     }
   }

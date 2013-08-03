@@ -8,10 +8,6 @@ $column_width: 306px;
 // footer
 footer {
   background: url("backgrounds/header-footer-background.png") repeat scroll 0 0 $light_grey;
-  // background: -webkit-linear-gradient($gradient_top_bottom);
-  // background: -moz-linear-gradient($gradient_top_bottom);
-  // background: -ms-linear-gradient($gradient_top_bottom);
-  // background: -o-linear-gradient($gradient_top_bottom);
   box-shadow: $shadow_top_only;
   -webkit-box-shadow: $shadow_top_only;
   -moz-box-shadow: $shadow_top_only;
@@ -36,6 +32,7 @@ footer {
   }
   .content {
     padding: 30px 10px 40px;
+    width: auto;
     .column_1,
     .column_2,
     .column_3 {
@@ -96,7 +93,6 @@ footer {
     }
     .importance .copyright {
       padding-left: 5px;
-      width: 500px;
     }
     .importance nav {
       float: right;
