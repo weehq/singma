@@ -35,7 +35,7 @@
     }
   }
   .main_menu {
-    background: url("backgrounds/header-footer-background.png") repeat scroll 0 0 $light_grey;
+    background: asset-data-url("backgrounds/header-footer-background.png") repeat scroll 0 0 $light_grey;
     box-shadow: $shadow_bottom_only;
     -webkit-box-shadow: $shadow_bottom_only;
     -moz-box-shadow: $shadow_bottom_only;
