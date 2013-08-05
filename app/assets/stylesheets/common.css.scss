@@ -22,6 +22,8 @@ $shadow_bottom_heading: inset 0 -10px 10px -10px $light_grey;
 
 // media queries
 $mobile_max: 568px;
+$tablet_min: 768px;
+$tablet_max: 1024px;
 
 // h2
 h2.box_heading {
@@ -93,9 +95,9 @@ form {
   background-image: -o-linear-gradient(top, $light_orange, $dark_orange);
   background-image: linear-gradient(top, $light_orange, $dark_orange);
   border: none;
-  border-radius: 0px;
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
+  border-radius: 0;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
   color: $whiteish;
   cursor: pointer;
   display: block;
@@ -125,6 +127,12 @@ a.submit_button {
   #header {
     margin-bottom: 20px;
     .main_menu {
+      position: fixed;
+      left: 0;
+      right: 0;
+      top: 0;
+      width: 100%;
+      z-index: 9999;
       .content {
         width: auto;
       }
@@ -144,7 +152,7 @@ a.submit_button {
       }
     }
     .content {
-      padding: 20px 10px 0;
+      padding: 56px 10px 0;
       h1 {
         font-size: 32px;
         line-height: 34px;
@@ -162,7 +170,7 @@ a.submit_button {
       }
       .licence-number {
         left: 136px;
-        top: 117px;
+        top: 153px;
       }
     }
   }
@@ -230,6 +238,182 @@ a.submit_button {
       }
       .link_separator {
         margin-right: 5px;
+      }
+    }
+  }
+  #gallery {
+    .left-content, .right-content {
+      width: 100%;
+    }
+    .right-content {
+      margin: 0;
+      h2 {
+        margin-top: 30px;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: $tablet_min) and (max-width: $tablet_max) and (orientation: portrait) {
+  #header {
+    margin-bottom: 20px;
+    .main_menu {
+      position: fixed;
+      left: 0;
+      right: 0;
+      top: 0;
+      width: 100%;
+      z-index: 9999;
+      .right_menu {
+        position: relative;
+        right: 20px;
+      }
+    }
+    .content {
+      padding: 56px 10px 0;
+      width: 100%;
+      .licence-number {
+        top: 131px;
+      }
+    }
+  }
+  .main .content {
+    width: auto;
+  }
+  #home, #quote {
+    .intro {
+      float: none;
+      margin: 0 auto;
+      width: auto;
+      .important-message {
+        font-size: 24px;
+        margin-bottom: 10px;
+        margin-left: 10px;
+        margin-right: 10px;
+        padding: 10px;
+        text-align: center;
+        width: auto;
+      }
+    }
+    .quote {
+      float: none;
+      margin: 0 auto;
+      width: auto;
+    }
+    form {
+      border-left: none;
+    }
+  }
+  footer {
+    ul li {
+      float: none;
+    }
+    .content {
+      width: auto;
+      .column_1,
+      .column_2,
+      .column_3 {
+        float: none;
+        width: 100%;
+      }
+      .importance {
+        text-align: center;
+        width: 100%;
+      }
+      .importance .copyright {
+        padding-left: 0;
+      }
+      .importance .copyright .abn_reserved {
+        display: block;
+      }
+      .importance nav {
+        float: none;
+        padding-right: 0;
+      }
+      .importance nav li {
+        display: inline-block;
+      }
+      .column_3 ul {
+        text-align: center;
+      }
+      .column_3 ul li {
+        display: inline-block;
+      }
+      .link_separator {
+        margin-right: 5px;
+      }
+    }
+  }
+  #gallery {
+    .left-content {
+      width: 55%;
+    }
+    .right-content {
+      width: 40%;
+      h2 {
+        margin-top: 30px;
+      }
+    }
+  }
+}
+@media only screen and (min-width: $tablet_min) and (max-width: $tablet_max) and (orientation: landscape) {
+  #header {
+    margin-bottom: 20px;
+    .main_menu {
+      position: fixed;
+      left: 0;
+      right: 0;
+      top: 0;
+      width: 100%;
+      z-index: 9999;
+      .right_menu {
+        position: relative;
+        right: 20px;
+      }
+    }
+    .content {
+      padding: 56px 10px 0;
+      width: 100%;
+      .licence-number {
+        top: 131px;
+      }
+    }
+  }
+  .main .content {
+    width: auto;
+  }
+  #home, #quote {
+    .intro {
+      float: none;
+      margin: 0 auto;
+      width: auto;
+      .important-message {
+        font-size: 24px;
+        margin-bottom: 10px;
+        margin-left: 10px;
+        margin-right: 10px;
+        padding: 10px;
+        text-align: center;
+        width: auto;
+      }
+    }
+    .quote {
+      float: none;
+      margin: 0 auto;
+      width: auto;
+    }
+    form {
+      border-left: none;
+    }
+  }
+  #gallery {
+    .left-content {
+      width: 67%;
+    }
+    .right-content {
+      width: 30%;
+      h2 {
+        margin-top: 30px;
       }
     }
   }

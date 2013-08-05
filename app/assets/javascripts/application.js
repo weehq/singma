@@ -19,10 +19,9 @@ jQuery(function($) {
     // Load the classic theme
     Galleria.loadTheme('/assets/galleria/galleria.classic.min.js');
     // Initialize Galleria
-    $('#galleria').galleria({
-      width: 620,
-      height: 370,
-      transition: 'fade'
+    Galleria.run('#galleria', {
+      transition: 'fade',
+      responsive: true
     });
   }
 
