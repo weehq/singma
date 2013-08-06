@@ -30,7 +30,7 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 1.2'
 
 # https://github.com/bokmann/font-awesome-rails
-# gem 'font-awesome-rails'
+gem 'font-awesome-rails'
 
 # https://github.com/adzap/validates_timeliness
 gem 'validates_timeliness'
