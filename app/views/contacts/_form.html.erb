@@ -12,20 +12,20 @@
     <%= f.text_field :address %>
   </div>
   <div class="field clearfix">
-    <%= f.label :postcode %>
-    <%= f.text_field :postcode, {:maxlength => 4} %>
+    <%= f.label :email %>
+    <%= f.email_field :email %>
   </div>
   <div class="field clearfix">
     <%= f.label :phone %>
     <%= f.text_field :phone %>
   </div>
   <div class="field clearfix">
-    <%= f.label :email %>
-    <%= f.email_field :email %>
-  </div>
-  <div class="field clearfix">
     <%= f.label :prefer_contact %>
     <%= f.select :prefer_contact, "<option>Phone</option><option>Email</option>".html_safe, :prompt => "Select" %>
+  </div>
+  <div class="field clearfix">
+    <%= f.label :postcode %>
+    <%= f.text_field :postcode, {:maxlength => 4} %>
   </div>
   <div class="field clearfix">
     <%= f.label :bathroom_requirements %>

@@ -12,15 +12,15 @@
 
   <div class="field clearfix">
     <%= f.label :name %>
-    <%= f.text_field :name, :size => 30 %>
+    <%= f.text_field :name %>
   </div>
   <div class="field clearfix">
     <%= f.label :email %>
-    <%= f.email_field :email, :size => 30 %>
+    <%= f.email_field :email %>
   </div>
   <div class="field clearfix">
     <%= f.label :phone %>
-    <%= f.text_field :phone, :size => 30 %>
+    <%= f.text_field :phone %>
   </div>
   <div class="field clearfix">
     <%= f.label :postcode %>
@@ -28,7 +28,7 @@
   </div>
   <div class="field clearfix">
     <%= f.label :ground_floor %>
-    <%= f.check_box :ground_floor, {:checked => true}, 'Y' %>
+    <%= f.check_box :ground_floor, {}, 'Y' %>
   </div>
   <div class="field clearfix">
     <%= f.label :access_difficulty %>
@@ -40,11 +40,11 @@
 <!--  </div>-->
   <div class="field clearfix">
     <%= f.label :full_renovation %>
-    <%= f.check_box :full_renovation, {:checked => true}, 'Y' %>
+    <%= f.check_box :full_renovation, {}, 'Y' %>
   </div>
   <div class="field clearfix">
     <%= f.label :other_comments %>
-    <%= f.text_area :other_comments, :col => 35, :rows => '10' %>
+    <%= f.text_area :other_comments %>
   </div>
 
   <div class="actions clearfix">

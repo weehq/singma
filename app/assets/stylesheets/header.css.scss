@@ -3,7 +3,7 @@
 #header {
   margin-bottom: 25px;
   .content {
-    padding: 30px 10px 0;
+    padding: 56px 10px 0;
     position: relative;
     img {
       border: none;
@@ -31,7 +31,7 @@
       font-size: 13px;
       left: 216px;
       position: absolute;
-      top: 105px;
+      top: 131px;
     }
   }
   .main_menu {
@@ -40,6 +40,11 @@
     -webkit-box-shadow: $shadow_bottom_only;
     -moz-box-shadow: $shadow_bottom_only;
     color: $whiteish;
+    left: 0;
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 9999;
     a {
       color: $whiteish;
     }

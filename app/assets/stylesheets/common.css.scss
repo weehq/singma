@@ -7,6 +7,7 @@ $darkish_orange: #f56100;
 $light_grey: #6e6d71;
 $lighter_grey: #999;
 $dark_grey: #333;
+$red: #ff0000;
 
 // border
 $border_top_bottom: 1px dotted $lighter_grey;
@@ -60,6 +61,22 @@ form {
       float: left;
       margin-bottom: 10px;
       padding: 3px 5px;
+      width: auto;
+    }
+   input, textarea {
+      width: 240px;
+    }
+    input#quote_postcode, input#contact_postcode {
+      width: auto;
+    }
+    textarea {
+      height: 155px;
+    }
+    label.error {
+      clear: both;
+      color: $red;
+      margin-left: 110px;
+      margin-top: -10px;
       width: auto;
     }
   }
@@ -127,12 +144,7 @@ a.submit_button {
   #header {
     margin-bottom: 20px;
     .main_menu {
-      position: fixed;
-      left: 0;
-      right: 0;
-      top: 0;
       width: 100%;
-      z-index: 9999;
       .content {
         width: auto;
       }
@@ -152,7 +164,6 @@ a.submit_button {
       }
     }
     .content {
-      padding: 56px 10px 0;
       h1 {
         font-size: 32px;
         line-height: 34px;
@@ -258,23 +269,17 @@ a.submit_button {
   #header {
     margin-bottom: 20px;
     .main_menu {
-      position: fixed;
-      left: 0;
-      right: 0;
-      top: 0;
       width: 100%;
-      z-index: 9999;
       .right_menu {
         position: relative;
         right: 20px;
+        .welcome {
+          display: none;
+        }
       }
     }
     .content {
-      padding: 56px 10px 0;
       width: 100%;
-      .licence-number {
-        top: 131px;
-      }
     }
   }
   .main .content {
@@ -355,28 +360,24 @@ a.submit_button {
       }
     }
   }
+  #testimonial {
+    section.section {
+      width: auto;
+    }
+  }
 }
 @media only screen and (min-width: $tablet_min) and (max-width: $tablet_max) and (orientation: landscape) {
   #header {
     margin-bottom: 20px;
     .main_menu {
-      position: fixed;
-      left: 0;
-      right: 0;
-      top: 0;
       width: 100%;
-      z-index: 9999;
       .right_menu {
         position: relative;
         right: 20px;
       }
     }
     .content {
-      padding: 56px 10px 0;
       width: 100%;
-      .licence-number {
-        top: 131px;
-      }
     }
   }
   .main .content {
@@ -415,6 +416,11 @@ a.submit_button {
       h2 {
         margin-top: 30px;
       }
+    }
+  }
+  #testimonial {
+    section.section {
+      width: auto;
     }
   }
 }
