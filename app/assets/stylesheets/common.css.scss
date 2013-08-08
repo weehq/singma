@@ -274,8 +274,8 @@ and (orientation: portrait) {
     .main_menu {
       width: 100%;
       .right_menu {
-        position: relative;
-        right: 20px;
+        // position: relative;
+        // right: 20px;
         .welcome {
           display: none;
         }
@@ -303,9 +303,6 @@ and (orientation: portrait) {
     }
     .quote {
       width: 49%;
-    }
-    form {
-      border-left: none;
     }
   }
   form {
@@ -380,10 +377,8 @@ and (orientation: landscape) {
     margin-bottom: 20px;
     width: 100%;
     .main_menu {
-      width: 100%;
-      .right_menu {
-        position: relative;
-        right: 20px;
+      .content {
+        width: 98%;
       }
     }
     .content {
@@ -417,10 +412,10 @@ and (orientation: landscape) {
       width: 100%;
       .column_1,
       .column_2 {
-        width: 29%;
+        width: 27%;
       }
       .column_3 {
-        width: 38%;
+        width: 39%;
       }
     }
   }
