@@ -369,6 +369,7 @@ and (orientation: portrait) {
     }
   }
 }
+
 @media only screen
 and (min-width: $tablet_min)
 and (max-width: $tablet_max)
@@ -388,7 +389,7 @@ and (orientation: landscape) {
   .main .content {
     width: 100%;
   }
-  #home, #quote {
+  #home {
     .intro {
       width: 49%;
       .important-message {
@@ -403,6 +404,15 @@ and (orientation: landscape) {
     }
     .quote {
       width: 49%;
+    }
+  }
+  form {
+    .field {
+      input[type="text"],
+      input[type="email"],
+      textarea {
+        width: 220px;
+      }
     }
   }
   footer {
