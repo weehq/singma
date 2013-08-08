@@ -369,9 +369,13 @@ a.submit_button {
     }
   }
 }
-@media only screen and (min-width: $tablet_min) and (max-width: $tablet_max) and (orientation: landscape) {
+@media only screen
+and (min-width: $tablet_min)
+and (max-width: $tablet_max)
+and (orientation: landscape) {
   #header {
     margin-bottom: 20px;
+    width: 768px;
     .main_menu {
       width: 100%;
       .right_menu {
@@ -407,8 +411,9 @@ a.submit_button {
     }
   }
   footer {
+    width: 768px;
     .content {
-      width: 100%;
+      width: auto;
       .column_1,
       .column_2,
       .column_3 {
