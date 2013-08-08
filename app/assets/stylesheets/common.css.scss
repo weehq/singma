@@ -22,6 +22,7 @@ $shadow_bottom_only: inset 0 -10px 10px -10px $dark_grey;
 $shadow_bottom_heading: inset 0 -10px 10px -10px $light_grey;
 
 // media queries
+$mobile_min: 320px;
 $mobile_max: 568px;
 $tablet_min: 768px;
 $tablet_max: 1024px;
@@ -140,7 +141,9 @@ a.submit_button {
   background-image: linear-gradient(top, $lightish_orange, $darkish_orange);
 }
 
-@media only screen and (max-width: $mobile_max) {
+@media only screen
+and (min-width: $mobile_min)
+and (max-width: $mobile_max) {
   #header {
     margin-bottom: 20px;
     .main_menu {
@@ -210,6 +213,13 @@ a.submit_button {
     }
     form {
       border-left: none;
+      .field {
+        input[type="text"],
+        input[type="email"],
+        textarea {
+          width: 160px;
+        }
+      }
     }
   }
   footer {
