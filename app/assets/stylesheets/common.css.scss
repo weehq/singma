@@ -409,9 +409,6 @@ and (orientation: landscape) {
     .quote {
       width: 49%;
     }
-    form {
-      border-left: none;
-    }
   }
   footer {
     padding-right: 20px;
@@ -420,10 +417,10 @@ and (orientation: landscape) {
       width: 100%;
       .column_1,
       .column_2 {
-        width: 28%;
+        width: 29%;
       }
       .column_3 {
-        width: 38%;
+        width: 37%;
       }
     }
   }
