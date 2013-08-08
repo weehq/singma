@@ -31,10 +31,6 @@ footer {
     margin-right: 5px;
   }
   .content {
-    background: asset-data-url("backgrounds/header-footer-background.png") repeat scroll 0 0 $light_grey;
-    box-shadow: $shadow_top_only;
-    -webkit-box-shadow: $shadow_top_only;
-    -moz-box-shadow: $shadow_top_only;
     padding: 30px 10px 40px;
     .column_1,
     .column_2,
