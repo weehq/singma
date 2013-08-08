@@ -7,6 +7,10 @@ $column_width: 306px;
 
 // footer
 footer {
+  background: asset-data-url("backgrounds/header-footer-background.png") repeat scroll 0 0 $light_grey;
+  box-shadow: $shadow_top_only;
+  -webkit-box-shadow: $shadow_top_only;
+  -moz-box-shadow: $shadow_top_only;
   color: $whiteish;
   h2 {
     border-bottom: 1px dotted $lighter_grey;
