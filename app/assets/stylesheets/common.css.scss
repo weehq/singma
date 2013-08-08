@@ -146,6 +146,7 @@ and (min-width: $mobile_min)
 and (max-width: $mobile_max) {
   #header {
     margin-bottom: 20px;
+    width: 100%;
     .main_menu {
       width: 100%;
       .content {
@@ -170,7 +171,9 @@ and (max-width: $mobile_max) {
       h1 {
         font-size: 32px;
         line-height: 34px;
-        .singma, .bathroom, .renovations {
+        .singma,
+        .bathroom,
+        .renovations {
           display: block;
         }
         .bathroom {
@@ -191,7 +194,7 @@ and (max-width: $mobile_max) {
   .main .content {
     width: auto;
   }
-  #home, #quote {
+  #home {
     .intro {
       float: none;
       margin: 0 auto 35px;
@@ -223,6 +226,7 @@ and (max-width: $mobile_max) {
     }
   }
   footer {
+    width: 100%;
     ul li {
       float: none;
     }
@@ -263,7 +267,8 @@ and (max-width: $mobile_max) {
     }
   }
   #gallery {
-    .left-content, .right-content {
+    .left-content,
+    .right-content {
       width: 100%;
     }
     .right-content {
