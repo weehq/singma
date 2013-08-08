@@ -416,7 +416,7 @@ a.submit_button {
         width: 31%;
       }
       .column_1 {
-        margin-left: 15px;
+        margin-left: 10px;
       }
     }
   }
@@ -428,6 +428,14 @@ a.submit_button {
       width: 29%;
       h2 {
         margin-top: 30px;
+      }
+      .social-media {
+        .show-desktop {
+          display: none;
+        }
+        .show-tablet {
+          display: block;
+        }
       }
     }
   }

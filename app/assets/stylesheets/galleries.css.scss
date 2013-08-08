@@ -33,6 +33,9 @@
       border-bottom: 1px dotted $lighter_grey;
       margin-bottom: 10px;
       padding-bottom: 10px;
+      .show-tablet {
+        display: none;
+      }
     }
   }
 }
