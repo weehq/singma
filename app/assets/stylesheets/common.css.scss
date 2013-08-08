@@ -271,11 +271,10 @@ and (max-width: $tablet_max)
 and (orientation: portrait) {
   #header {
     margin-bottom: 20px;
+    width: 100%;
     .main_menu {
-      width: 100%;
-      .right_menu {
-        // position: relative;
-        // right: 20px;
+      .content {
+        width: 98%;
         .welcome {
           display: none;
         }
@@ -288,7 +287,7 @@ and (orientation: portrait) {
   .main .content {
     width: 100%;
   }
-  #home, #quote {
+  #home {
     .intro {
       width: 49%;
       .important-message {
@@ -307,12 +306,16 @@ and (orientation: portrait) {
   }
   form {
     .field {
-      input[type="text"], input[type="email"], textarea {
+      input[type="text"],
+      input[type="email"],
+      textarea {
         width: 200px;
       }
     }
   }
   footer {
+    padding-right: 20px;
+    width: 100%;
     ul li {
       float: none;
     }
@@ -377,10 +380,8 @@ and (orientation: landscape) {
   #header {
     margin-bottom: 20px;
     width: 100%;
-    .main_menu {
-      .content {
-        width: 98%;
-      }
+    .main_menu .content {
+      width: 98%;
     }
     .content {
       width: 100%;
