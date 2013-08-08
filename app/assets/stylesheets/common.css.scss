@@ -272,12 +272,10 @@ and (orientation: portrait) {
   #header {
     margin-bottom: 20px;
     width: 100%;
-    .main_menu {
-      .content {
-        width: 98%;
-        .welcome {
-          display: none;
-        }
+    .main_menu .content {
+      width: 98%;
+      .welcome {
+        display: none;
       }
     }
     .content {
@@ -368,7 +366,7 @@ and (orientation: portrait) {
   }
   #testimonial {
     section.section {
-      width: auto;
+      width: 98%;
     }
   }
 }
@@ -382,6 +380,9 @@ and (orientation: landscape) {
     width: 100%;
     .main_menu .content {
       width: 98%;
+      .welcome {
+        display: none;
+      }
     }
     .content {
       width: 100%;
@@ -453,7 +454,7 @@ and (orientation: landscape) {
   }
   #testimonial {
     section.section {
-      width: auto;
+      width: 98%;
     }
   }
 }
