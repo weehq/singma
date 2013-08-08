@@ -410,12 +410,14 @@ and (orientation: landscape) {
     width: 100%;
     .content {
       width: 100%;
-      .column_1,
+      .column_1 {
+        width: 28%;
+      }
       .column_2 {
         width: 27%;
       }
       .column_3 {
-        width: 39%;
+        width: 38%;
       }
     }
   }
