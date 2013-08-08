@@ -63,7 +63,7 @@ form {
       padding: 3px 5px;
       width: auto;
     }
-   input, textarea {
+    input[type="text"], input[type="email"], textarea {
       width: 240px;
     }
     input#quote_postcode, input#contact_postcode {
@@ -283,7 +283,7 @@ a.submit_button {
     }
   }
   .main .content {
-    width: auto;
+    width: 100%;
   }
   #home, #quote {
     .intro {
@@ -314,7 +314,7 @@ a.submit_button {
       float: none;
     }
     .content {
-      width: auto;
+      width: 100%;
       .column_1,
       .column_2,
       .column_3 {
@@ -381,7 +381,7 @@ a.submit_button {
     }
   }
   .main .content {
-    width: auto;
+    width: 100%;
   }
   #home, #quote {
     .intro {
@@ -405,6 +405,11 @@ a.submit_button {
     }
     form {
       border-left: none;
+    }
+  }
+  footer {
+    .content {
+      width: 100%;
     }
   }
   #gallery {
