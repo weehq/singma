@@ -265,7 +265,10 @@ a.submit_button {
   }
 }
 
-@media only screen and (min-width: $tablet_min) and (max-width: $tablet_max) and (orientation: portrait) {
+@media only screen
+and (min-width: $tablet_min)
+and (max-width: $tablet_max)
+and (orientation: portrait) {
   #header {
     margin-bottom: 20px;
     .main_menu {
@@ -375,7 +378,7 @@ and (max-width: $tablet_max)
 and (orientation: landscape) {
   #header {
     margin-bottom: 20px;
-    width: 768px;
+    width: 100%;
     .main_menu {
       width: 100%;
       .right_menu {
@@ -411,16 +414,14 @@ and (orientation: landscape) {
     }
   }
   footer {
+    padding-right: 20px;
     width: 100%;
     .content {
-      width: auto;
+      width: 100%;
       .column_1,
       .column_2,
       .column_3 {
-        width: 31%;
-      }
-      .column_1 {
-        margin-left: 10px;
+        width: 32%;
       }
     }
   }
