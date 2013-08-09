@@ -231,6 +231,15 @@ and (max-width: $mobile_max) {
       width: 94%;
     }
   }
+  #contact_us {
+    form .field {
+      input[type="text"],
+      input[type="email"],
+      textarea {
+        width: 155px;
+      }
+    }
+  }
   footer {
     width: 100%;
     ul li {
