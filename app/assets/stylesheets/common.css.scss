@@ -226,6 +226,11 @@ and (max-width: $mobile_max) {
       }
     }
   }
+  #testimonial {
+    section.section {
+      width: 94%;
+    }
+  }
   footer {
     width: 100%;
     ul li {
