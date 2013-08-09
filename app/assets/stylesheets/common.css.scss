@@ -309,11 +309,11 @@ and (orientation: portrait) {
       }
     }
     .content {
-      width: 98%;
+      width: 100%;
     }
   }
   .main .content {
-    width: 98%;
+    width: 100%;
   }
   #home {
     .intro {
@@ -415,11 +415,11 @@ and (orientation: landscape) {
       }
     }
     .content {
-      width: 98%;
+      width: 100%;
     }
   }
   .main .content {
-    width: 98%;
+    width: 100%;
   }
   #home {
     .intro {
@@ -451,7 +451,7 @@ and (orientation: landscape) {
     padding-right: 20px;
     width: 100%;
     .content {
-      width: 100%;
+      width: 98%;
       .column_1 {
         width: 29%;
       }
