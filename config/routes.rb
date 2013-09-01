@@ -1,4 +1,6 @@
 Singma::Application.routes.draw do
+  resources :customers
+
   mount Kss::Engine => '/kss' if Rails.env.development?
 
   resources :galleries, :path => 'gallery'
