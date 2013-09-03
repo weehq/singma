@@ -2,6 +2,7 @@ class GalleriesController < ApplicationController
   # GET /galleries
   # GET /galleries.json
   def index
+    @customers = Customer.all
     @galleries = Gallery.all
 
     respond_to do |format|

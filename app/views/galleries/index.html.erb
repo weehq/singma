@@ -1,13 +1,23 @@
 <div id='gallery' class='clearfix'>
   <div class='left-content'>
-    <h2><%= @galleries.first.title %> <%= h2 %></h2>
-
-    <div id="galleria">
-      <% @galleries.each do |gallery| -%>
-        <a href="<%= gallery.image %>"><img data-title="<%= gallery.title %>" data-description="<%= gallery.description unless gallery.description.blank? %>" src="<%= gallery.image %>" /></a>
-      <% end -%>
+    <div id="tabs">
+      <ul>
+        <% @customers.each_with_index do |customer, index| %>
+          <li>
+            <a href="#tabs-<%= index %>"><%= customer.galleries.first.title %> <%= h2 %></a>
+          </li>
+        <% end %>
+      </ul>
+      <% @customers.each_with_index do |customer, index| %>
+        <div id="tabs-<%= index %>">
+          <div class="galleria">
+            <% customer.galleries.each do |gallery| %>
+              <a href="<%= gallery.image %>"><img data-title="<%= gallery.title %>" data-description="<%= gallery.description unless gallery.description.blank? %>" src="<%= gallery.image %>" /></a>
+            <% end %>
+          </div>
+        </div>
+      <% end %>
     </div>
-
     <p class='highlight'>Stay tuned for more photos ...</p>
   </div>
 
