@@ -24,7 +24,8 @@ jQuery(function($) {
     // Initialize Galleria
     Galleria.run('.galleria', {
       transition: 'fade',
-      responsive: true
+      responsive: true,
+      wait: true
     });
   };
 
