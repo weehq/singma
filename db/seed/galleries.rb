@@ -6,12 +6,12 @@ module Galleries
 
   puts "Loading Dulwich Hill gallery ...\n"
   (1..38).each do |index|
-    Gallery.create(title: 'Dulwich Hill', image: "/assets/gallery/dulwich-hill-liz/dulwich-hill-#{index}.JPG")
+    Gallery.create(customer_id: 1, title: 'Dulwich Hill', image: "/assets/gallery/dulwich-hill-liz/dulwich-hill-#{index}.JPG")
   end
 
   puts "Loading Turramurra gallery ...\n"
   (1..4).each do |index|
-    Gallery.create(title: 'Turramurra', image: "/assets/gallery/turramurra-kaz/turramurra-#{index}.jpg")
+    Gallery.create(customer_id: 2, title: 'Turramurra', image: "/assets/gallery/turramurra-kaz/turramurra-#{index}.jpg")
   end
 
   puts "[END] Galleries\n\n"
