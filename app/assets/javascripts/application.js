@@ -12,14 +12,17 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require jquery.ui.all
 //= require_tree .
 jQuery(function($) {
   if (location.pathname.match(/gallery$/)) {
+    jQuery( "#tabs" ).tabs();
+
     // Galleria Slider
     // Load the classic theme
     Galleria.loadTheme('/assets/galleria/galleria.classic.min.js');
     // Initialize Galleria
-    Galleria.run('#galleria', {
+    Galleria.run('.galleria', {
       transition: 'fade',
       responsive: true
     });
