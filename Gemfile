@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-ruby '2.0.0'
+ruby '2.5.0'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.0'
@@ -74,20 +74,9 @@ gem 'asset_sync','> 0.2.4'
 # https://github.com/rails/protected_attributes
 gem 'protected_attributes'
 
-# bundle exec rake doc:rails generates the API under doc/api.
-gem 'sdoc', require: false, group: :doc
-
-# Use debugger
-gem 'debugger', group: [ :development, :test ]
-
 group :development do
 	# https://github.com/dewski/kss-rails
 	gem 'kss-rails'
-
-	# https://github.com/macournoyer/thin/
-	gem 'thin'
-
-	gem 'therubyracer'
 end
 
 # https://github.com/rspec/rspec-rails
