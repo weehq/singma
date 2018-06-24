@@ -3,7 +3,7 @@ source 'https://rubygems.org'
 ruby '2.5.0'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '4.0.0'
+#gem 'rails', '5.1.4'
 
 # https://devcenter.heroku.com/articles/rails-integration-gems
 gem 'rails_12factor'
